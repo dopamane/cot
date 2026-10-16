@@ -31,9 +31,12 @@ executable cot
   ghc-options:      -Wall -O2 -threaded
   hs-source-dirs:   exe
   main-is:          Main.hs
+  other-modules:    Paths_cot
+  autogen-modules:  Paths_cot
   build-depends:
     base < 5,
-    cot
+    cot,
+    optparse-applicative
 
 test-suite test
   default-language: Haskell2010
