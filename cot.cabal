@@ -24,7 +24,8 @@ library
   hs-source-dirs:   lib
   exposed-modules:  Data.COT
   build-depends:
-    base < 5
+    base < 5,
+    megaparsec
 
 executable cot
   default-language: Haskell2010
@@ -36,6 +37,7 @@ executable cot
   build-depends:
     base < 5,
     cot,
+    megaparsec,
     optparse-applicative
 
 test-suite test

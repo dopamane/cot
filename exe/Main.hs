@@ -4,12 +4,15 @@ import Data.COT
 import Data.Version
 import Options.Applicative
 import Paths_cot
+import Text.Megaparsec
 
 main :: IO ()
 main = do
   cli <- customExecParser prefs' $ pinfo $ showVersion version
   case cli of
-    ParseCOT fM -> print . parseCOT =<< maybe getContents readFile fM
+    ParseCOT fM -> do
+      s <- maybe getContents readFile fM
+      putStrLn $ either errorBundlePretty show $ parseCOT s
     PrettyCOT _ _ -> error "not implemented"
 
 prefs' :: ParserPrefs
