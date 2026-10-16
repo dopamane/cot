@@ -1,0 +1,21 @@
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 6, 2026            
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+GASOLINE RBOB - NEW YORK MERCANTILE EXCHANGE   (CONTRACTS OF 42,000 U.S. GALLONS)                              :
+CFTC Code #111659                                                    Open Interest is   348,700                :
+: Positions                                                                                                    :
+:   82,103   177,384    52,144    40,913     9,985   109,150    12,064    39,616    10,021    36,576    19,601 :
+:                                                                                                              :
+: Changes from:     September 29, 2026                                                                         :
+:       74     5,096    -1,248      -409      -869     4,355     1,455     2,362     1,530      -870      -754 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     23.5      50.9      15.0      11.7       2.9      31.3       3.5      11.4       2.9      10.5       5.6 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   238                     :
+:       55        78        17         8        15        70        13        45        22        19        26 :
+----------------------------------------------------------------------------------------------------------------

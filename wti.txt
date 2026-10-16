@@ -1,0 +1,21 @@
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 6, 2026            
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE   (CONTRACTS OF 1,000 BARRELS)                                     :
+CFTC Code #067651                                                    Open Interest is 1,889,422                :
+: Positions                                                                                                    :
+:  618,756   283,746   117,407   578,875   158,167   178,353   124,755   311,571   158,353   112,891   269,626 :
+:                                                                                                              :
+: Changes from:     September 29, 2026                                                                         :
+:    2,869   -12,602     3,849     3,160    13,975   -30,675    -4,681     8,584     6,030    -9,561     8,875 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     32.7      15.0       6.2      30.6       8.4       9.4       6.6      16.5       8.4       6.0      14.3 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   298                     :
+:       61        56        12        28        31        60        29        58        63        33        62 :
+----------------------------------------------------------------------------------------------------------------
