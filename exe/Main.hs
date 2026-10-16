@@ -9,7 +9,7 @@ main :: IO ()
 main = do
   cli <- customExecParser prefs' $ pinfo $ showVersion version
   case cli of
-    ParseCOT _ -> error "not implemented"
+    ParseCOT fM -> print . parseCOT =<< maybe getContents readFile fM
     PrettyCOT _ _ -> error "not implemented"
 
 prefs' :: ParserPrefs
