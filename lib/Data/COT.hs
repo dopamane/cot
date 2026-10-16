@@ -30,8 +30,8 @@ type Parser = Parsec Void String
 
 parseRpt :: Parser Rpt
 parseRpt = do
-  title' <- some printChar <* "as of "
-  date' <- some printChar <* newline
+  title' <- unwords <$> some word <* "-" <* someTill word "as of "
+  date' <- parseDate <* hspace <* eol
   return Rpt{title=title', date=date', subtitle="", contract="", exchange=""
     , underlying="", code="", openInterest=0, changesFrom="", totTraders=0
     , prod=prod', swap=swap', managed=managed', other=other'}
@@ -40,6 +40,16 @@ parseRpt = do
     swap'=emptyCat
     managed'=emptyCat
     other'=emptyCat
+
+parseDate :: Parser String
+parseDate = do
+  m <- some letterChar <* " "
+  d <- some digitChar <* ", "
+  y <- some digitChar
+  return $ unwords [m, d ++ ",", y]
+
+word :: Parser String
+word = some alphaNumChar <* hspace
 
 prettyCOT :: COT -> String
 prettyCOT _ = ""
