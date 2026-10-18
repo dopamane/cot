@@ -50,10 +50,13 @@ parseRpt = do
   cs <- line (some num) <* line hspace
   _ <- line "Percent of Open Interest Represented by Each Category of Trader"
   oi <- line (some dub) <* line hspace
+  totTraders' <- line $ "Number of Traders in Each Category" *> hspace
+    *> "Total Traders:" *> hspace *> num
+  ts <- line (some num) <* some "-" <* eol
   return Rpt{title=title', subtitle=subtitle', date=date', repPos=unwords repPos'
     , contract=unwords contract', exchange=unwords exchange'
     , underlying=underlying', code=code', openInterest=openInterest'
-    , changesFrom=changesFrom', totTraders=0, prod=prod', swap=swap'
+    , changesFrom=changesFrom', totTraders=totTraders', prod=prod', swap=swap'
     , managed=managed', other=other'}
   where
     prod'=emptyCat
