@@ -44,6 +44,8 @@ parseRpt = do
   underlying' <- someTill printChar ")" <* hspace <* ":" <* eol
   code' <- "CFTC Code #" *> some digitChar <* hspace
   openInterest' <- "Open Interest is" *> hspace *> num <* hspace <* ":" <* eol
+  _ <- ":" *> hspace *> "Positions" <* hspace <* ":" <* eol
+  ps <- ":" *> hspace *> some num <* eol
   return Rpt{title=title', subtitle=subtitle', date=date', repPos=unwords repPos'
     , contract=unwords contract', exchange=unwords exchange'
     , underlying=underlying', code=code', openInterest=openInterest'
