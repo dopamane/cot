@@ -45,11 +45,13 @@ parseRpt = do
   code' <- "CFTC Code #" *> some digitChar <* hspace
   openInterest' <- "Open Interest is" *> hspace *> num <* hspace <* ":" <* eol
   _ <- ":" *> hspace *> "Positions" <* hspace <* ":" <* eol
-  ps <- ":" *> hspace *> some num <* eol
+  ps <- ":" *> hspace *> some num <* ":" <* eol
+  _ <- ":" *> hspace *> ":" *> eol
+  changesFrom' <- ": Changes from:" *> hspace *> parseDate <* hspace <* ":" <* eol
   return Rpt{title=title', subtitle=subtitle', date=date', repPos=unwords repPos'
     , contract=unwords contract', exchange=unwords exchange'
     , underlying=underlying', code=code', openInterest=openInterest'
-    , changesFrom="", totTraders=0, prod=prod', swap=swap'
+    , changesFrom=changesFrom', totTraders=0, prod=prod', swap=swap'
     , managed=managed', other=other'}
   where
     prod'=emptyCat
