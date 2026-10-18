@@ -2,6 +2,7 @@
 
 module Data.COT (COT, Rpt(..), Cat(..), parseCOT, prettyCOT) where
 
+import Control.Monad
 import Data.Void
 import Text.Megaparsec
 import Text.Megaparsec.Char
@@ -42,7 +43,7 @@ parseRpt = do
   exchange' <- someTill word "("
   underlying' <- someTill printChar ")" <* hspace <* ":" <* eol
   code' <- "CFTC Code #" *> some digitChar <* hspace
-  openInterest' <- "Open Interest is" *> hspace *> L.decimal <* hspace <* ":" <* eol
+  openInterest' <- "Open Interest is" *> hspace *> num <* hspace <* ":" <* eol
   return Rpt{title=title', subtitle=subtitle', date=date', repPos=unwords repPos'
     , contract=unwords contract', exchange=unwords exchange'
     , underlying=underlying', code=code', openInterest=openInterest'
@@ -63,6 +64,12 @@ parseDate = do
 
 word :: Parser String
 word = some alphaNumChar <* hspace
+
+num :: Parser Integer
+num = L.signed hspace $ fmap read go <* hspace
+  where
+    go :: Parser String
+    go = fmap join $ some $ fmap pure digitChar <|> ("," *> pure [])
 
 prettyCOT :: COT -> String
 prettyCOT _ = ""
