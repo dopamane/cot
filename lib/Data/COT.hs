@@ -3,6 +3,7 @@
 module Data.COT (COT, Rpt(..), Cat(..), parseCOT, prettyCOT) where
 
 import Control.Monad
+import Data.Functor
 import Data.Void
 import Text.Megaparsec
 import Text.Megaparsec.Char
@@ -35,8 +36,8 @@ parseRpt = do
   title' <- unwords <$> someTill word "-"
   subtitle' <- unwords <$> someTill word "as of "
   date' <- parseDate <* hspace <* eol
-  repPos' <- ":" *> hspace *> some word <* hspace <* ":" <* eol
-  _ <- ":" *> some "-" *> " :" *> eol
+  repPos' <- line $ some word
+  _ <- line $ some "-"
   _ <- count 3 $ someTill printChar eol
   _ <- some "-" <* eol
   contract' <- someTill word "- "
@@ -44,10 +45,11 @@ parseRpt = do
   underlying' <- someTill printChar ")" <* hspace <* ":" <* eol
   code' <- "CFTC Code #" *> some digitChar <* hspace
   openInterest' <- "Open Interest is" *> hspace *> num <* hspace <* ":" <* eol
-  _ <- ":" *> hspace *> "Positions" <* hspace <* ":" <* eol
-  ps <- ":" *> hspace *> some num <* ":" <* eol
-  _ <- ":" *> hspace *> ":" *> eol
-  changesFrom' <- ": Changes from:" *> hspace *> parseDate <* hspace <* ":" <* eol
+  ps <- line "Positions" *> line (some num) <* line hspace
+  changesFrom' <- line $ "Changes from:" *> hspace *> parseDate
+  cs <- line (some num) <* line hspace
+  _ <- line "Percent of Open Interest Represented by Each Category of Trader"
+  oi <- line (some dub) <* line hspace
   return Rpt{title=title', subtitle=subtitle', date=date', repPos=unwords repPos'
     , contract=unwords contract', exchange=unwords exchange'
     , underlying=underlying', code=code', openInterest=openInterest'
@@ -73,7 +75,13 @@ num :: Parser Integer
 num = L.signed hspace $ fmap read go <* hspace
   where
     go :: Parser String
-    go = fmap join $ some $ fmap pure digitChar <|> ("," *> pure [])
+    go = fmap join $ some $ fmap pure digitChar <|> ("," $> [])
+
+dub :: Parser Double
+dub = L.signed hspace L.float <* hspace
+
+line :: Parser a -> Parser a
+line p = ":" *> hspace *> p <* hspace <* ":" <* eol
 
 prettyCOT :: COT -> String
 prettyCOT _ = ""
