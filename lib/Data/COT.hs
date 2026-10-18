@@ -5,6 +5,7 @@ module Data.COT (COT, Rpt(..), Cat(..), parseCOT, prettyCOT) where
 import Data.Void
 import Text.Megaparsec
 import Text.Megaparsec.Char
+import qualified Text.Megaparsec.Char.Lexer as L
 
 type COT = [Rpt]
 
@@ -41,9 +42,10 @@ parseRpt = do
   exchange' <- someTill word "("
   underlying' <- someTill printChar ")" <* hspace <* ":" <* eol
   code' <- "CFTC Code #" *> some digitChar <* hspace
+  openInterest' <- "Open Interest is" *> hspace *> L.decimal <* hspace <* ":" <* eol
   return Rpt{title=title', subtitle=subtitle', date=date', repPos=unwords repPos'
     , contract=unwords contract', exchange=unwords exchange'
-    , underlying=underlying', code=code', openInterest=0
+    , underlying=underlying', code=code', openInterest=openInterest'
     , changesFrom="", totTraders=0, prod=prod', swap=swap'
     , managed=managed', other=other'}
   where
