@@ -53,13 +53,17 @@ parseRpt = do
   totTraders' <- line $ "Number of Traders in Each Category" *> hspace
     *> "Total Traders:" *> hspace *> num
   ts <- line (some num) <* some "-" <* eol
+  let prod' = Cat{posLong=head ps, posShort=ps !! 1, posSpread=Nothing
+      , changeLong=head cs, changeShort=cs !! 1, changeSpread=Nothing
+      , pctOpenLong=head oi, pctOpenShort=oi !! 1, pctOpenSpread=Nothing
+      , tradersLong=head ts, tradersShort=ts !! 1, tradersSpread=Nothing
+      }
   return Rpt{title=title', subtitle=subtitle', date=date', repPos=unwords repPos'
     , contract=unwords contract', exchange=unwords exchange'
     , underlying=underlying', code=code', openInterest=openInterest'
     , changesFrom=changesFrom', totTraders=totTraders', prod=prod', swap=swap'
     , managed=managed', other=other'}
   where
-    prod'=emptyCat
     swap'=emptyCat
     managed'=emptyCat
     other'=emptyCat
