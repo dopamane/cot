@@ -34,8 +34,16 @@ parseRpt = do
   subtitle' <- unwords <$> someTill word "as of "
   date' <- parseDate <* hspace <* eol
   repPos' <- ":" *> hspace *> some word <* hspace <* ":" <* eol
+  _ <- ":" *> some "-" *> " :" *> eol
+  _ <- count 3 $ someTill printChar eol
+  _ <- some "-" <* eol
+  contract' <- someTill word "- "
+  exchange' <- someTill word "("
+  underlying' <- someTill printChar ")" <* hspace <* ":" <* eol
+  code' <- "CFTC Code #" *> some digitChar <* hspace
   return Rpt{title=title', subtitle=subtitle', date=date', repPos=unwords repPos'
-    , contract="", exchange="", underlying="", code="", openInterest=0
+    , contract=unwords contract', exchange=unwords exchange'
+    , underlying=underlying', code=code', openInterest=0
     , changesFrom="", totTraders=0, prod=prod', swap=swap'
     , managed=managed', other=other'}
   where
