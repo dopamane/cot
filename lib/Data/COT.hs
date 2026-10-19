@@ -64,11 +64,13 @@ instance Pretty Rpt where
         <+> maybe "." pretty (pctOpenSpread o) <+> ":"
     , ":                                                                                                              :"
     , ": Number of Traders in Each Category                           Total Traders:" <+> pnum (totTraders r) <+> ":"
-    , ":" <+> pnum (tradersLong p) <+> pnum (tradersShort p)
-        <+> pnum (tradersLong s) <+> pnum (tradersShort s) <+> maybe "." pnum (tradersSpread s)
-        <+> pnum (tradersLong m) <+> pnum (tradersShort m) <+> maybe "." pnum (tradersSpread m)
-        <+> pnum (tradersLong o) <+> pnum (tradersShort o) <+> maybe "." pnum (tradersSpread o) <+> ":"
-    , "----------------------------------------------------------------------------------------------------------------"
+    , let ts = [snum $ tradersLong p, snum $ tradersShort p
+            , snum $ tradersLong s, snum $ tradersShort s, maybe "." snum $ tradersSpread s
+            , snum $ tradersLong m, snum $ tradersShort m, maybe "." snum $ tradersSpread m
+            , snum $ tradersLong o, snum $ tradersShort o, maybe "." snum $ tradersSpread o
+            ]
+      in ":" <+> hsep [pretty $ replicate (cwidth - length t') ' ' ++ t' ++ " " | t' <- ts] <> ":"
+    , pretty $ replicate pwidth '-'
     ]
 
 data Cat = Cat{posLong :: Integer, posShort :: Integer, posSpread :: Maybe Integer
