@@ -54,7 +54,10 @@ instance Pretty Rpt where
         <+> maybe "." pretty (pctOpenSpread o) <+> ":"
     , ":                                                                                                              :"
     , ": Number of Traders in Each Category                           Total Traders:" <+> pretty (totTraders r) <+> ":"
-    , ""
+    , ":" <+> pretty (tradersLong p) <+> pretty (tradersShort p)
+        <+> pretty (tradersLong s) <+> pretty (tradersShort s) <+> maybe "." pretty (tradersSpread s)
+        <+> pretty (tradersLong m) <+> pretty (tradersShort m) <+> maybe "." pretty (tradersSpread m)
+        <+> pretty (tradersLong o) <+> pretty (tradersShort o) <+> maybe "." pretty (tradersSpread o) <+> ":"
     , "----------------------------------------------------------------------------------------------------------------"
     ]
 
