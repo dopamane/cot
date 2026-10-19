@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module Data.COT (COT, Rpt(..), Cat(..), parseCOT, prettyCOT) where
+module Data.COT (COT, Rpt(..), Cat(..), parseCOT) where
 
 import Control.Monad
 import Data.Functor
@@ -8,6 +8,7 @@ import Data.Void
 import Text.Megaparsec
 import Text.Megaparsec.Char
 import qualified Text.Megaparsec.Char.Lexer as L
+import Prettyprinter hiding (line)
 
 type COT = [Rpt]
 
@@ -16,6 +17,11 @@ data Rpt = Rpt{title :: String, subtitle :: String, date :: String, repPos :: St
   , code :: String, openInterest :: Integer, changesFrom :: String
   , totTraders :: Integer, prod :: Cat, swap :: Cat, managed :: Cat, other :: Cat}
   deriving (Eq, Read, Show)
+
+instance Pretty Rpt where
+  pretty r = vsep
+    [ pretty (title r) <> "-" <> pretty (subtitle r) <+> "as of" <+> pretty (date r)
+    ]
 
 data Cat = Cat{posLong :: Integer, posShort :: Integer, posSpread :: Maybe Integer
   , changeLong :: Integer, changeShort :: Integer, changeSpread :: Maybe Integer
@@ -103,6 +109,3 @@ dub = L.signed hspace L.float <* hspace
 
 line :: Parser a -> Parser a
 line p = ":" *> hspace *> p <* hspace <* ":" <* eol
-
-prettyCOT :: COT -> String
-prettyCOT _ = ""

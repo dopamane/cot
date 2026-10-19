@@ -25,7 +25,8 @@ library
   exposed-modules:  Data.COT
   build-depends:
     base < 5,
-    megaparsec
+    megaparsec,
+    prettyprinter
 
 executable cot
   default-language: Haskell2010
@@ -38,7 +39,8 @@ executable cot
     base < 5,
     cot,
     megaparsec,
-    optparse-applicative
+    optparse-applicative,
+    prettyprinter
 
 test-suite test
   default-language: Haskell2010
