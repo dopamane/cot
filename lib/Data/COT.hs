@@ -49,12 +49,11 @@ instance Pretty Rpt where
     , ":                                                                                                              :"
     , let info = "Changes from:" ++ replicate 5 ' ' ++ changesFrom r
       in ":" <+> pretty info <> pretty (replicate (pwidth - length info - 3) ' ') <> ":"
-    , ":" <+> pnum (changeLong p) <+> pnum (changeShort p)
-        <+> pnum (changeLong s) <+> pnum (changeShort s)
-        <+> maybe "." pnum (changeSpread s) <+> pnum (changeLong m)
-        <+> pnum (changeShort m) <+> maybe "." pnum (changeSpread m)
-        <+> pnum (changeLong o) <+> pnum (changeShort o)
-        <+> maybe "." pnum (changeSpread o) <+> ":"
+    , let cs = [snum $ changeLong p, snum $ changeShort p
+            , snum $ changeLong s, snum $ changeShort s, maybe "." snum $ changeSpread s
+            , snum $ changeLong m, snum $ changeShort m, maybe "." snum $ changeSpread m
+            , snum $ changeLong o, snum $ changeShort o, maybe "." snum $ changeSpread o]
+      in ":" <+> hsep [pretty $ replicate (cwidth - length c') ' ' ++ c' ++ " " | c' <- cs] <> ":"
     , ":                                                                                                              :"
     , ": Percent of Open Interest Represented by Each Category of Trader                                              :"
     , ":" <+> pretty (pctOpenLong p) <+> pretty (pctOpenShort p)
