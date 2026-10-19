@@ -34,7 +34,9 @@ instance Pretty Rpt where
     , let info = contract r ++ " - " ++ exchange r ++ "   (" ++ underlying r ++ ")"
           pad = pwidth - length info - 1
       in pretty info <> pretty (replicate pad ' ') <> ":"
-    , "CFTC Code #" <> pretty (code r) <+> "Open Interest is" <+> pnum (openInterest r)
+    , let info = "CFTC Code #" ++ code r ++ replicate 52 ' ' ++ "Open Interest is   " ++ snum (openInterest r)
+          pad = pwidth - length info - 1
+      in pretty info <> pretty (replicate pad ' ') <> ":"
     , ": Positions                                                                                                    :"
     , ":" <+> pnum (posLong p) <+> pnum (posShort p) <+> pnum (posLong s)
         <+> pnum (posShort s) <+> maybe "." pnum (posSpread s)
@@ -148,7 +150,10 @@ num = L.signed hspace $ fmap read go <* hspace
     go = fmap join $ some $ fmap pure digitChar <|> ("," $> [])
 
 pnum :: Integer -> Doc ann
-pnum i = pretty $ case show i of
+pnum = pretty . snum
+
+snum :: Integer -> String
+snum i = case show i of
   '-':ns -> "-" <> fmt (reverse ns)
   ns -> fmt $ reverse ns
   where
