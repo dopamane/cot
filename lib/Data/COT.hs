@@ -19,7 +19,7 @@ data Rpt = Rpt{title :: String, subtitle :: String, date :: String, repPos :: St
   deriving (Eq, Read, Show)
 
 instance Pretty Rpt where
-  pretty r = vsep
+  pretty r@Rpt{prod=p,swap=s,managed=m,other=o} = vsep
     [ pretty (title r) <> "-" <> pretty (subtitle r) <+> "as of" <+> pretty (date r)
     , ":                                             " <> pretty (repPos r)
       <> "                                             :"
@@ -30,6 +30,12 @@ instance Pretty Rpt where
     , "----------------------------------------------------------------------------------------------------------------"
     , pretty (contract r) <+> "-" <+> pretty (exchange r) <> "   " <> "(" <> pretty (underlying r) <> ")" <+> ":"
     , "CFTC Code #" <> pretty (code r) <+> "Open Interest is" <+> pretty (openInterest r)
+    , ": Positions                                                                                                    :"
+    , ":" <+> pretty (posLong p) <+> pretty (posShort p) <+> pretty (posLong s)
+        <+> pretty (posShort s) <+> maybe "." pretty (posSpread s)
+        <+> pretty (posLong m) <+> pretty (posShort m)
+        <+> maybe "." pretty (posSpread m) <+> pretty (posLong o)
+        <+> pretty (posShort o) <+> maybe "." pretty (posSpread o) <+> ":"
     ]
 
 data Cat = Cat{posLong :: Integer, posShort :: Integer, posSpread :: Maybe Integer
