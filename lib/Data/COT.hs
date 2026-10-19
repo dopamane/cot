@@ -47,7 +47,8 @@ instance Pretty Rpt where
             , snum $ posLong o, snum $ posShort o, maybe "." snum $ posSpread o]
       in ":" <+> hsep [pretty $ replicate (cwidth - length p') ' ' ++ p' ++ " " | p' <- ps] <> ":"
     , ":                                                                                                              :"
-    , ": Changes from:" <+> pretty (changesFrom r) <+> ":"
+    , let info = "Changes from:" ++ replicate 5 ' ' ++ changesFrom r
+      in ":" <+> pretty info <> pretty (replicate (pwidth - length info - 3) ' ') <> ":"
     , ":" <+> pnum (changeLong p) <+> pnum (changeShort p)
         <+> pnum (changeLong s) <+> pnum (changeShort s)
         <+> maybe "." pnum (changeSpread s) <+> pnum (changeLong m)
