@@ -53,20 +53,29 @@ parseRpt = do
   totTraders' <- line $ "Number of Traders in Each Category" *> hspace
     *> "Total Traders:" *> hspace *> num
   ts <- line (some num) <* some "-" <* eol
-  let prod' = Cat{posLong=head ps, posShort=ps !! 1, posSpread=Nothing
-      , changeLong=head cs, changeShort=cs !! 1, changeSpread=Nothing
-      , pctOpenLong=head oi, pctOpenShort=oi !! 1, pctOpenSpread=Nothing
-      , tradersLong=head ts, tradersShort=ts !! 1, tradersSpread=Nothing
-      }
-  return Rpt{title=title', subtitle=subtitle', date=date', repPos=unwords repPos'
-    , contract=unwords contract', exchange=unwords exchange'
-    , underlying=underlying', code=code', openInterest=openInterest'
-    , changesFrom=changesFrom', totTraders=totTraders', prod=prod', swap=swap'
-    , managed=managed', other=other'}
+  case mkCats ps cs oi ts of
+    Left err -> error err
+    Right (prod',swap',managed',other') -> return Rpt{title=title'
+      , subtitle=subtitle', date=date', repPos=unwords repPos'
+      , contract=unwords contract', exchange=unwords exchange'
+      , underlying=underlying', code=code', openInterest=openInterest'
+      , changesFrom=changesFrom', totTraders=totTraders', prod=prod', swap=swap'
+      , managed=managed', other=other'}
+
+mkCats :: [Integer] -> [Integer] -> [Double] -> [Integer] -> Either String (Cat, Cat, Cat, Cat)
+mkCats [p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10] [c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10]
+  [o0,o1,o2,o3,o4,o5,o6,o7,o8,o9,o10] [t0,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10]
+  = Right (prod', swap', emptyCat, emptyCat)
   where
-    swap'=emptyCat
-    managed'=emptyCat
-    other'=emptyCat
+    prod'=Cat{posLong=p0, posShort=p1, posSpread=Nothing, changeLong=c0
+      , changeShort=c1, changeSpread=Nothing, pctOpenLong=o0, pctOpenShort=o1
+      , pctOpenSpread=Nothing, tradersLong=t0, tradersShort=t1
+      , tradersSpread=Nothing}
+    swap'=Cat{posLong=p2, posShort=p3, posSpread=Just p4, changeLong=c2
+      , changeShort=c3, changeSpread=Just c4, pctOpenLong=o2, pctOpenShort=o3
+      , pctOpenSpread=Just o4, tradersLong=t2, tradersShort=t3
+      , tradersSpread=Just t4}
+mkCats _ _ _ _ = Left "Invalid category data"
 
 parseDate :: Parser String
 parseDate = do
