@@ -23,9 +23,6 @@ data Cat = Cat{posLong :: Integer, posShort :: Integer, posSpread :: Maybe Integ
   , tradersLong :: Integer, tradersShort :: Integer, tradersSpread :: Maybe Integer
   } deriving (Eq, Read, Show)
 
-emptyCat :: Cat
-emptyCat = Cat 0 0 Nothing 0 0 Nothing 0 0 Nothing 0 0 Nothing
-
 parseCOT :: String -> Either (ParseErrorBundle String Void) COT
 parseCOT = parse (many parseRpt) ""
 
@@ -65,7 +62,7 @@ parseRpt = do
 mkCats :: [Integer] -> [Integer] -> [Double] -> [Integer] -> Either String (Cat, Cat, Cat, Cat)
 mkCats [p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10] [c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10]
   [o0,o1,o2,o3,o4,o5,o6,o7,o8,o9,o10] [t0,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10]
-  = Right (prod', swap', emptyCat, emptyCat)
+  = Right (prod', swap', managed', other')
   where
     prod'=Cat{posLong=p0, posShort=p1, posSpread=Nothing, changeLong=c0
       , changeShort=c1, changeSpread=Nothing, pctOpenLong=o0, pctOpenShort=o1
@@ -75,6 +72,14 @@ mkCats [p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10] [c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10]
       , changeShort=c3, changeSpread=Just c4, pctOpenLong=o2, pctOpenShort=o3
       , pctOpenSpread=Just o4, tradersLong=t2, tradersShort=t3
       , tradersSpread=Just t4}
+    managed'=Cat{posLong=p5, posShort=p6, posSpread=Just p7, changeLong=c5
+      , changeShort=c6, changeSpread=Just c7, pctOpenLong=o5, pctOpenShort=o6
+      , pctOpenSpread=Just o7, tradersLong=t5, tradersShort=t6
+      , tradersSpread=Just t7}
+    other'=Cat{posLong=p8, posShort=p9, posSpread=Just p10, changeLong=c8
+      , changeShort=c9, changeSpread=Just c10, pctOpenLong=o8, pctOpenShort=o9
+      , pctOpenSpread=Just o10, tradersLong=t8, tradersShort=t9
+      , tradersSpread=Just t10}
 mkCats _ _ _ _ = Left "Invalid category data"
 
 parseDate :: Parser String
