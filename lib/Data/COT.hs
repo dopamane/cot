@@ -44,6 +44,18 @@ instance Pretty Rpt where
         <+> pretty (changeShort m) <+> maybe "." pretty (changeSpread m)
         <+> pretty (changeLong o) <+> pretty (changeShort o)
         <+> maybe "." pretty (changeSpread o) <+> ":"
+    , ":                                                                                                              :"
+    , ": Percent of Open Interest Represented by Each Category of Trader                                              :"
+    , ":" <+> pretty (pctOpenLong p) <+> pretty (pctOpenShort p)
+        <+> pretty (pctOpenLong s) <+> pretty (pctOpenShort s)
+        <+> maybe "." pretty (pctOpenSpread s) <+> pretty (pctOpenLong m)
+        <+> pretty (pctOpenShort m) <+> maybe "." pretty (pctOpenSpread m)
+        <+> pretty (pctOpenLong o) <+> pretty (pctOpenShort o)
+        <+> maybe "." pretty (pctOpenSpread o) <+> ":"
+    , ":                                                                                                              :"
+    , ": Number of Traders in Each Category                           Total Traders:" <+> pretty (totTraders r) <+> ":"
+    , ""
+    , "----------------------------------------------------------------------------------------------------------------"
     ]
 
 data Cat = Cat{posLong :: Integer, posShort :: Integer, posSpread :: Maybe Integer
