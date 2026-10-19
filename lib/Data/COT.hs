@@ -21,6 +21,9 @@ data Rpt = Rpt{title :: String, subtitle :: String, date :: String, repPos :: St
 pwidth :: Num a => a
 pwidth = 112
 
+cwidth :: Num a => a
+cwidth = 8
+
 instance Pretty Rpt where
   pretty r@Rpt{prod=p,swap=s,managed=m,other=o} = vsep
     [ pretty (title r) <> "-" <> pretty (subtitle r) <+> "as of" <+> pretty (date r)
@@ -38,11 +41,11 @@ instance Pretty Rpt where
           pad = pwidth - length info - 1
       in pretty info <> pretty (replicate pad ' ') <> ":"
     , ": Positions                                                                                                    :"
-    , ":" <+> pnum (posLong p) <+> pnum (posShort p) <+> pnum (posLong s)
-        <+> pnum (posShort s) <+> maybe "." pnum (posSpread s)
-        <+> pnum (posLong m) <+> pnum (posShort m)
-        <+> maybe "." pnum (posSpread m) <+> pnum (posLong o)
-        <+> pnum (posShort o) <+> maybe "." pnum (posSpread o) <+> ":"
+    , let ps = [snum $ posLong p, snum $ posShort p
+            , snum $ posLong s, snum $ posShort s, maybe "." snum $ posSpread s
+            , snum $ posLong m, snum $ posShort m, maybe "." snum $ posSpread m
+            , snum $ posLong o, snum $ posShort o, maybe "." snum $ posSpread o]
+      in ":" <+> hsep [pretty $ replicate (cwidth - length p') ' ' ++ p' ++ " " | p' <- ps] <> ":"
     , ":                                                                                                              :"
     , ": Changes from:" <+> pretty (changesFrom r) <+> ":"
     , ":" <+> pnum (changeLong p) <+> pnum (changeShort p)
