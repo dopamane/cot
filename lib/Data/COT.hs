@@ -21,6 +21,15 @@ data Rpt = Rpt{title :: String, subtitle :: String, date :: String, repPos :: St
 instance Pretty Rpt where
   pretty r = vsep
     [ pretty (title r) <> "-" <> pretty (subtitle r) <+> "as of" <+> pretty (date r)
+    , ":                                             " <> pretty (repPos r)
+      <> "                                             :"
+    , ":------------------------------------------------------------------------------------------------------------- :"
+    , ": Producer/Merchant :                             :                             :                              :"
+    , ":  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :"
+    , ":   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :"
+    , "----------------------------------------------------------------------------------------------------------------"
+    , pretty (contract r) <+> "-" <+> pretty (exchange r) <> "   " <> "(" <> pretty (underlying r) <> ")" <+> ":"
+    , "CFTC Code #" <> pretty (code r) <+> "Open Interest is" <+> pretty (openInterest r)
     ]
 
 data Cat = Cat{posLong :: Integer, posShort :: Integer, posSpread :: Maybe Integer
