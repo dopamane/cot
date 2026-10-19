@@ -36,6 +36,14 @@ instance Pretty Rpt where
         <+> pretty (posLong m) <+> pretty (posShort m)
         <+> maybe "." pretty (posSpread m) <+> pretty (posLong o)
         <+> pretty (posShort o) <+> maybe "." pretty (posSpread o) <+> ":"
+    , ":                                                                                                              :"
+    , ": Changes from:" <+> pretty (changesFrom r) <+> ":"
+    , ":" <+> pretty (changeLong p) <+> pretty (changeShort p)
+        <+> pretty (changeLong s) <+> pretty (changeShort s)
+        <+> maybe "." pretty (changeSpread s) <+> pretty (changeLong m)
+        <+> pretty (changeShort m) <+> maybe "." pretty (changeSpread m)
+        <+> pretty (changeLong o) <+> pretty (changeShort o)
+        <+> maybe "." pretty (changeSpread o) <+> ":"
     ]
 
 data Cat = Cat{posLong :: Integer, posShort :: Integer, posSpread :: Maybe Integer
