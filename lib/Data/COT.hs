@@ -29,21 +29,21 @@ instance Pretty Rpt where
     , ":   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :"
     , "----------------------------------------------------------------------------------------------------------------"
     , pretty (contract r) <+> "-" <+> pretty (exchange r) <> "   " <> "(" <> pretty (underlying r) <> ")" <+> ":"
-    , "CFTC Code #" <> pretty (code r) <+> "Open Interest is" <+> pretty (openInterest r)
+    , "CFTC Code #" <> pretty (code r) <+> "Open Interest is" <+> pnum (openInterest r)
     , ": Positions                                                                                                    :"
-    , ":" <+> pretty (posLong p) <+> pretty (posShort p) <+> pretty (posLong s)
-        <+> pretty (posShort s) <+> maybe "." pretty (posSpread s)
-        <+> pretty (posLong m) <+> pretty (posShort m)
-        <+> maybe "." pretty (posSpread m) <+> pretty (posLong o)
-        <+> pretty (posShort o) <+> maybe "." pretty (posSpread o) <+> ":"
+    , ":" <+> pnum (posLong p) <+> pnum (posShort p) <+> pnum (posLong s)
+        <+> pnum (posShort s) <+> maybe "." pnum (posSpread s)
+        <+> pnum (posLong m) <+> pnum (posShort m)
+        <+> maybe "." pnum (posSpread m) <+> pnum (posLong o)
+        <+> pnum (posShort o) <+> maybe "." pnum (posSpread o) <+> ":"
     , ":                                                                                                              :"
     , ": Changes from:" <+> pretty (changesFrom r) <+> ":"
-    , ":" <+> pretty (changeLong p) <+> pretty (changeShort p)
-        <+> pretty (changeLong s) <+> pretty (changeShort s)
-        <+> maybe "." pretty (changeSpread s) <+> pretty (changeLong m)
-        <+> pretty (changeShort m) <+> maybe "." pretty (changeSpread m)
-        <+> pretty (changeLong o) <+> pretty (changeShort o)
-        <+> maybe "." pretty (changeSpread o) <+> ":"
+    , ":" <+> pnum (changeLong p) <+> pnum (changeShort p)
+        <+> pnum (changeLong s) <+> pnum (changeShort s)
+        <+> maybe "." pnum (changeSpread s) <+> pnum (changeLong m)
+        <+> pnum (changeShort m) <+> maybe "." pnum (changeSpread m)
+        <+> pnum (changeLong o) <+> pnum (changeShort o)
+        <+> maybe "." pnum (changeSpread o) <+> ":"
     , ":                                                                                                              :"
     , ": Percent of Open Interest Represented by Each Category of Trader                                              :"
     , ":" <+> pretty (pctOpenLong p) <+> pretty (pctOpenShort p)
@@ -53,11 +53,11 @@ instance Pretty Rpt where
         <+> pretty (pctOpenLong o) <+> pretty (pctOpenShort o)
         <+> maybe "." pretty (pctOpenSpread o) <+> ":"
     , ":                                                                                                              :"
-    , ": Number of Traders in Each Category                           Total Traders:" <+> pretty (totTraders r) <+> ":"
-    , ":" <+> pretty (tradersLong p) <+> pretty (tradersShort p)
-        <+> pretty (tradersLong s) <+> pretty (tradersShort s) <+> maybe "." pretty (tradersSpread s)
-        <+> pretty (tradersLong m) <+> pretty (tradersShort m) <+> maybe "." pretty (tradersSpread m)
-        <+> pretty (tradersLong o) <+> pretty (tradersShort o) <+> maybe "." pretty (tradersSpread o) <+> ":"
+    , ": Number of Traders in Each Category                           Total Traders:" <+> pnum (totTraders r) <+> ":"
+    , ":" <+> pnum (tradersLong p) <+> pnum (tradersShort p)
+        <+> pnum (tradersLong s) <+> pnum (tradersShort s) <+> maybe "." pnum (tradersSpread s)
+        <+> pnum (tradersLong m) <+> pnum (tradersShort m) <+> maybe "." pnum (tradersSpread m)
+        <+> pnum (tradersLong o) <+> pnum (tradersShort o) <+> maybe "." pnum (tradersSpread o) <+> ":"
     , "----------------------------------------------------------------------------------------------------------------"
     ]
 
@@ -141,6 +141,18 @@ num = L.signed hspace $ fmap read go <* hspace
   where
     go :: Parser String
     go = fmap join $ some $ fmap pure digitChar <|> ("," $> [])
+
+pnum :: Integer -> Doc ann
+pnum i = pretty $ case show i of
+  '-':ns -> "-" <> fmt (reverse ns)
+  ns -> fmt $ reverse ns
+  where
+    fmt s = case s of
+      [] -> []
+      [d] -> [d]
+      [a,b] -> [b,a]
+      [a,b,c] -> [c,b,a]
+      a:b:c:ds -> fmt ds ++ "," ++ [c,b,a]
 
 dub :: Parser Double
 dub = L.signed hspace L.float <* hspace
