@@ -18,6 +18,9 @@ data Rpt = Rpt{title :: String, subtitle :: String, date :: String, repPos :: St
   , totTraders :: Integer, prod :: Cat, swap :: Cat, managed :: Cat, other :: Cat}
   deriving (Eq, Read, Show)
 
+pwidth :: Num a => a
+pwidth = 112
+
 instance Pretty Rpt where
   pretty r@Rpt{prod=p,swap=s,managed=m,other=o} = vsep
     [ pretty (title r) <> "-" <> pretty (subtitle r) <+> "as of" <+> pretty (date r)
@@ -27,8 +30,10 @@ instance Pretty Rpt where
     , ": Producer/Merchant :                             :                             :                              :"
     , ":  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :"
     , ":   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :"
-    , "----------------------------------------------------------------------------------------------------------------"
-    , pretty (contract r) <+> "-" <+> pretty (exchange r) <> "   " <> "(" <> pretty (underlying r) <> ")" <+> ":"
+    , pretty $ replicate pwidth '-'
+    , let info = contract r ++ " - " ++ exchange r ++ "   (" ++ underlying r ++ ")"
+          pad = pwidth - length info - 1
+      in pretty info <> pretty (replicate pad ' ') <> ":"
     , "CFTC Code #" <> pretty (code r) <+> "Open Interest is" <+> pnum (openInterest r)
     , ": Positions                                                                                                    :"
     , ":" <+> pnum (posLong p) <+> pnum (posShort p) <+> pnum (posLong s)
