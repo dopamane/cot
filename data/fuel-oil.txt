@@ -1,0 +1,21 @@
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 13, 2026           
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+FUEL OIL-3% USGC/3.5% FOB RDAM - ICE FUTURES ENERGY DIV   (1000 barrels)                                       :
+CFTC Code #02141C                                                    Open Interest is    14,929                :
+: Positions                                                                                                    :
+:    8,862     7,622     3,635       622       215         0     2,760         0       527     2,040     1,642 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:    1,474       683         0        90        25         0         0         0         0       688      -246 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     59.4      51.1      24.3       4.2       1.4       0.0      18.5       0.0       3.5      13.7      11.0 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    40                     :
+:       20        18         4         .         .         0         .         0         .         4         . :
+----------------------------------------------------------------------------------------------------------------

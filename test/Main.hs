@@ -13,6 +13,7 @@ main = getDataDir >>= \dataDir ->
   defaultMain $ testGroup "Test.COT"
   [ trip "rbob" $ dataDir </> "rbob.txt"
   , trip "wti" $ dataDir </> "wti.txt"
+  , trip "fuel-oil" $ dataDir </> "fuel-oil.txt"
   ]
 
 trip :: String -> FilePath -> TestTree

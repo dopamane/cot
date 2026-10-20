@@ -68,10 +68,10 @@ instance Pretty Rpt where
     , let tot = snum $ totTraders r
       in ": Number of Traders in Each Category                                  Total Traders:"
            <+> pretty (replicate (cwidth - length tot - 3) ' ' ++ tot ++ replicate (cwidth * 2 + 4) ' ') <+> ":"
-    , let ts = [snum $ tradersLong p, snum $ tradersShort p
-            , snum $ tradersLong s, snum $ tradersShort s, maybe "." snum $ tradersSpread s
-            , snum $ tradersLong m, snum $ tradersShort m, maybe "." snum $ tradersSpread m
-            , snum $ tradersLong o, snum $ tradersShort o, maybe "." snum $ tradersSpread o
+    , let ts = [maybe "." snum $ tradersLong p, maybe "." snum $ tradersShort p
+            , maybe "." snum $ tradersLong s, maybe "." snum $ tradersShort s, maybe "." snum $ tradersSpread s
+            , maybe "." snum $ tradersLong m, maybe "." snum $ tradersShort m, maybe "." snum $ tradersSpread m
+            , maybe "." snum $ tradersLong o, maybe "." snum $ tradersShort o, maybe "." snum $ tradersSpread o
             ]
       in ":" <+> hsep [pretty $ replicate (cwidth - length t') ' ' ++ t' ++ " " | t' <- ts] <> ":"
     , pretty $ replicate pwidth '-'
@@ -80,7 +80,7 @@ instance Pretty Rpt where
 data Cat = Cat{posLong :: Integer, posShort :: Integer, posSpread :: Maybe Integer
   , changeLong :: Integer, changeShort :: Integer, changeSpread :: Maybe Integer
   , pctOpenLong :: Double, pctOpenShort :: Double, pctOpenSpread :: Maybe Double
-  , tradersLong :: Integer, tradersShort :: Integer, tradersSpread :: Maybe Integer
+  , tradersLong :: Maybe Integer, tradersShort :: Maybe Integer, tradersSpread :: Maybe Integer
   } deriving (Eq, Read, Show)
 
 parseCOT :: String -> Either (ParseErrorBundle String Void) COT
@@ -100,16 +100,16 @@ parseRpt = do
   contract' <- someTill printChar " - "
   exchange' <- someTill word "("
   underlying' <- someTill printChar ")" <* hspace <* ":" <* eol
-  code' <- "CFTC Code #" *> some digitChar <* hspace
+  code' <- "CFTC Code #" *> count 6 alphaNumChar <* hspace
   openInterest' <- "Open Interest is" *> hspace *> num <* hspace <* ":" <* eol
-  ps <- line "Positions" *> line (some num) <* line hspace
+  ps <- line "Positions" *> line (count 11 num) <* line hspace
   changesFrom' <- line $ "Changes from:" *> hspace *> parseDate
-  cs <- line (some num) <* line hspace
+  cs <- line (count 11 num) <* line hspace
   _ <- line "Percent of Open Interest Represented by Each Category of Trader"
-  oi <- line (some dub) <* line hspace
+  oi <- line (count 11 dub) <* line hspace
   totTraders' <- line $ "Number of Traders in Each Category" *> hspace
     *> "Total Traders:" *> hspace *> num
-  ts <- line (some num) <* some "-" <* eol
+  ts <- line (count 11 $ fmap Just num <|> ("." *> hspace $> Nothing)) <* some "-" <* eol
   case cats ps cs oi ts of
     Left err -> error err
     Right (prod',swap',managed',other') -> return Rpt{title=title'
@@ -119,7 +119,7 @@ parseRpt = do
       , changesFrom=changesFrom', totTraders=totTraders', prod=prod', swap=swap'
       , managed=managed', other=other'}
 
-cats :: [Integer] -> [Integer] -> [Double] -> [Integer] -> Either String (Cat, Cat, Cat, Cat)
+cats :: [Integer] -> [Integer] -> [Double] -> [Maybe Integer] -> Either String (Cat, Cat, Cat, Cat)
 cats [p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10] [c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10]
   [o0,o1,o2,o3,o4,o5,o6,o7,o8,o9,o10] [t0,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10]
   = Right (prod', swap', managed', other')
@@ -131,15 +131,15 @@ cats [p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10] [c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10]
     swap'=Cat{posLong=p2, posShort=p3, posSpread=Just p4, changeLong=c2
       , changeShort=c3, changeSpread=Just c4, pctOpenLong=o2, pctOpenShort=o3
       , pctOpenSpread=Just o4, tradersLong=t2, tradersShort=t3
-      , tradersSpread=Just t4}
+      , tradersSpread=t4}
     managed'=Cat{posLong=p5, posShort=p6, posSpread=Just p7, changeLong=c5
       , changeShort=c6, changeSpread=Just c7, pctOpenLong=o5, pctOpenShort=o6
       , pctOpenSpread=Just o7, tradersLong=t5, tradersShort=t6
-      , tradersSpread=Just t7}
+      , tradersSpread=t7}
     other'=Cat{posLong=p8, posShort=p9, posSpread=Just p10, changeLong=c8
       , changeShort=c9, changeSpread=Just c10, pctOpenLong=o8, pctOpenShort=o9
       , pctOpenSpread=Just o10, tradersLong=t8, tradersShort=t9
-      , tradersSpread=Just t10}
+      , tradersSpread=t10}
 cats _ _ _ _ = Left "Invalid category data"
 
 parseDate :: Parser String
