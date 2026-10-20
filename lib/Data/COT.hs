@@ -4,6 +4,7 @@ module Data.COT (COT, Rpt(..), Cat(..), parseCOT) where
 
 import Control.Monad
 import Data.Functor
+import Data.Maybe
 import Data.Void
 import Numeric
 import Prettyprinter hiding (line)
@@ -14,7 +15,7 @@ import qualified Text.Megaparsec.Char.Lexer as L
 type COT = [Rpt]
 
 data Rpt = Rpt{title :: String, subtitle :: String, date :: String, repPos :: String
-  , contract :: String, exchange :: String, underlying :: String
+  , contract :: String, exchange :: String, uparens :: Bool, underlying :: String
   , code :: String, openInterest :: Integer, changesFrom :: String
   , totTraders :: Integer, prod :: Cat, swap :: Cat, managed :: Cat, other :: Cat}
   deriving (Eq, Read, Show)
@@ -36,7 +37,9 @@ instance Pretty Rpt where
     , ":  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :"
     , ":   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :"
     , pretty $ replicate pwidth '-'
-    , let info = contract r ++ " - " ++ exchange r ++ "   (" ++ underlying r ++ ")"
+    , let under | uparens r = "(" ++ underlying r ++ ")"
+                | otherwise = underlying r
+          info = contract r ++ " - " ++ exchange r ++ "   " ++ under
           pad = pwidth - length info - 1
       in pretty info <> pretty (replicate pad ' ') <> ":"
     , let oi = snum $ openInterest r
@@ -99,7 +102,8 @@ parseRpt = do
   _ <- some "-" <* eol
   contract' <- someTill printChar " - "
   exchange' <- someTill printChar "   "
-  underlying' <- optional "(" *> someTill printChar (")" <|> "   ") <* hspace <* ":" <* eol
+  uparens' <- isJust <$> optional "("
+  underlying' <- someTill printChar (")" <|> "   ") <* hspace <* ":" <* eol
   code' <- "CFTC Code #" *> count 6 alphaNumChar <* hspace
   openInterest' <- "Open Interest is" *> hspace *> num <* hspace <* ":" <* eol
   ps <- line "Positions" *> line (count 11 num) <* line hspace
@@ -114,7 +118,7 @@ parseRpt = do
     Left err -> error err
     Right (prod',swap',managed',other') -> return Rpt{title=title'
       , subtitle=subtitle', date=date', repPos=unwords repPos'
-      , contract=contract', exchange=exchange'
+      , contract=contract', uparens=uparens', exchange=exchange'
       , underlying=underlying', code=code', openInterest=openInterest'
       , changesFrom=changesFrom', totTraders=totTraders', prod=prod', swap=swap'
       , managed=managed', other=other'}
