@@ -27,7 +27,8 @@ cwidth = 8
 
 instance Pretty Rpt where
   pretty r@Rpt{prod=p,swap=s,managed=m,other=o} = vsep
-    [ pretty (title r) <> "-" <> pretty (subtitle r) <+> "as of" <+> pretty (date r)
+    [ let info = title r ++ "-" ++ subtitle r ++ " as of " ++ date r
+      in pretty $ info ++ replicate (101 - length info) ' '
     , ":                                             " <> pretty (repPos r)
       <> "                                             :"
     , ":------------------------------------------------------------------------------------------------------------- :"
@@ -155,9 +156,6 @@ num = L.signed hspace $ fmap read go <* hspace
   where
     go :: Parser String
     go = fmap join $ some $ fmap pure digitChar <|> ("," $> [])
-
-pnum :: Integer -> Doc ann
-pnum = pretty . snum
 
 snum :: Integer -> String
 snum i = case show i of
