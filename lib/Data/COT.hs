@@ -5,10 +5,11 @@ module Data.COT (COT, Rpt(..), Cat(..), parseCOT) where
 import Control.Monad
 import Data.Functor
 import Data.Void
+import Numeric
+import Prettyprinter hiding (line)
 import Text.Megaparsec
 import Text.Megaparsec.Char
 import qualified Text.Megaparsec.Char.Lexer as L
-import Prettyprinter hiding (line)
 
 type COT = [Rpt]
 
@@ -56,12 +57,11 @@ instance Pretty Rpt where
       in ":" <+> hsep [pretty $ replicate (cwidth - length c') ' ' ++ c' ++ " " | c' <- cs] <> ":"
     , ":                                                                                                              :"
     , ": Percent of Open Interest Represented by Each Category of Trader                                              :"
-    , ":" <+> pretty (pctOpenLong p) <+> pretty (pctOpenShort p)
-        <+> pretty (pctOpenLong s) <+> pretty (pctOpenShort s)
-        <+> maybe "." pretty (pctOpenSpread s) <+> pretty (pctOpenLong m)
-        <+> pretty (pctOpenShort m) <+> maybe "." pretty (pctOpenSpread m)
-        <+> pretty (pctOpenLong o) <+> pretty (pctOpenShort o)
-        <+> maybe "." pretty (pctOpenSpread o) <+> ":"
+    , let os = [ sdub $ pctOpenLong p, sdub $ pctOpenShort p
+               , sdub $ pctOpenLong s, sdub $ pctOpenShort s, maybe "." sdub $ pctOpenSpread s
+               , sdub $ pctOpenLong m, sdub $ pctOpenShort m, maybe "." sdub $ pctOpenSpread m
+               , sdub $ pctOpenLong o, sdub $ pctOpenShort o, maybe "." sdub $ pctOpenSpread o]
+      in ":" <+> hsep [pretty $ replicate (cwidth - length o') ' ' ++ o' ++ " " | o' <- os] <> ":"
     , ":                                                                                                              :"
     , ": Number of Traders in Each Category                           Total Traders:" <+> pnum (totTraders r) <+> ":"
     , let ts = [snum $ tradersLong p, snum $ tradersShort p
@@ -171,6 +171,9 @@ snum i = case show i of
 
 dub :: Parser Double
 dub = L.signed hspace L.float <* hspace
+
+sdub :: Double -> String
+sdub d = showFFloat (Just 1) d ""
 
 line :: Parser a -> Parser a
 line p = ":" *> hspace *> p <* hspace <* ":" <* eol
