@@ -39,9 +39,10 @@ instance Pretty Rpt where
     , let info = contract r ++ " - " ++ exchange r ++ "   (" ++ underlying r ++ ")"
           pad = pwidth - length info - 1
       in pretty info <> pretty (replicate pad ' ') <> ":"
-    , let info = "CFTC Code #" ++ code r ++ replicate 52 ' ' ++ "Open Interest is   " ++ snum (openInterest r)
+    , let oi = snum $ openInterest r
+          info = "CFTC Code #" ++ code r ++ replicate 52 ' ' ++ "Open Interest is " ++ replicate (9 - length oi) ' ' ++ oi
           pad = pwidth - length info - 1
-      in pretty info <> pretty (replicate pad ' ') <> ":"
+      in pretty $ info ++ replicate pad ' ' ++ ":"
     , ": Positions                                                                                                    :"
     , let ps = [snum $ posLong p, snum $ posShort p
             , snum $ posLong s, snum $ posShort s, maybe "." snum $ posSpread s
@@ -96,7 +97,7 @@ parseRpt = do
   _ <- line $ some "-"
   _ <- count 3 $ someTill printChar eol
   _ <- some "-" <* eol
-  contract' <- someTill word "- "
+  contract' <- someTill printChar " - "
   exchange' <- someTill word "("
   underlying' <- someTill printChar ")" <* hspace <* ":" <* eol
   code' <- "CFTC Code #" *> some digitChar <* hspace
@@ -109,17 +110,17 @@ parseRpt = do
   totTraders' <- line $ "Number of Traders in Each Category" *> hspace
     *> "Total Traders:" *> hspace *> num
   ts <- line (some num) <* some "-" <* eol
-  case mkCats ps cs oi ts of
+  case cats ps cs oi ts of
     Left err -> error err
     Right (prod',swap',managed',other') -> return Rpt{title=title'
       , subtitle=subtitle', date=date', repPos=unwords repPos'
-      , contract=unwords contract', exchange=unwords exchange'
+      , contract=contract', exchange=unwords exchange'
       , underlying=underlying', code=code', openInterest=openInterest'
       , changesFrom=changesFrom', totTraders=totTraders', prod=prod', swap=swap'
       , managed=managed', other=other'}
 
-mkCats :: [Integer] -> [Integer] -> [Double] -> [Integer] -> Either String (Cat, Cat, Cat, Cat)
-mkCats [p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10] [c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10]
+cats :: [Integer] -> [Integer] -> [Double] -> [Integer] -> Either String (Cat, Cat, Cat, Cat)
+cats [p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10] [c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10]
   [o0,o1,o2,o3,o4,o5,o6,o7,o8,o9,o10] [t0,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10]
   = Right (prod', swap', managed', other')
   where
@@ -139,7 +140,7 @@ mkCats [p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10] [c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10]
       , changeShort=c9, changeSpread=Just c10, pctOpenLong=o8, pctOpenShort=o9
       , pctOpenSpread=Just o10, tradersLong=t8, tradersShort=t9
       , tradersSpread=Just t10}
-mkCats _ _ _ _ = Left "Invalid category data"
+cats _ _ _ _ = Left "Invalid category data"
 
 parseDate :: Parser String
 parseDate = do

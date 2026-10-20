@@ -10,10 +10,14 @@ import Test.Tasty.Golden
 
 main :: IO ()
 main = getDataDir >>= \dataDir ->
-  defaultMain $ testGroup "Test"
-  [ goldenVsString "rbob" (dataDir </> "rbob.txt") $ do
-      s <- readFile $ dataDir </> "rbob.txt"
-      case parseCOT s of
-        Left _ -> error "parse fail"
-        Right cot -> return $ BS.pack $ show (vsep $ map pretty cot) ++ "\n"
+  defaultMain $ testGroup "Test.COT"
+  [ trip "rbob" $ dataDir </> "rbob.txt"
+  , trip "wti" $ dataDir </> "wti.txt"
   ]
+
+trip :: String -> FilePath -> TestTree
+trip testName dataFile = goldenVsString testName dataFile $ do
+  result <- parseCOT <$> readFile dataFile
+  case result of
+    Left _ -> error "parse fail"
+    Right cot -> return $ BS.pack $ show (vsep $ map pretty cot) ++ "\n"
