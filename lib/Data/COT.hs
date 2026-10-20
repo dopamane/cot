@@ -63,7 +63,9 @@ instance Pretty Rpt where
                , sdub $ pctOpenLong o, sdub $ pctOpenShort o, maybe "." sdub $ pctOpenSpread o]
       in ":" <+> hsep [pretty $ replicate (cwidth - length o') ' ' ++ o' ++ " " | o' <- os] <> ":"
     , ":                                                                                                              :"
-    , ": Number of Traders in Each Category                           Total Traders:" <+> pnum (totTraders r) <+> ":"
+    , let tot = snum $ totTraders r
+      in ": Number of Traders in Each Category                                  Total Traders:"
+           <+> pretty (replicate (cwidth - length tot - 3) ' ' ++ tot ++ replicate (cwidth * 2 + 4) ' ') <+> ":"
     , let ts = [snum $ tradersLong p, snum $ tradersShort p
             , snum $ tradersLong s, snum $ tradersShort s, maybe "." snum $ tradersSpread s
             , snum $ tradersLong m, snum $ tradersShort m, maybe "." snum $ tradersSpread m
