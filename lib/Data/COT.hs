@@ -98,8 +98,8 @@ parseRpt = do
   _ <- count 3 $ someTill printChar eol
   _ <- some "-" <* eol
   contract' <- someTill printChar " - "
-  exchange' <- someTill word "("
-  underlying' <- someTill printChar ")" <* hspace <* ":" <* eol
+  exchange' <- someTill printChar "   "
+  underlying' <- optional "(" *> someTill printChar (")" <|> "   ") <* hspace <* ":" <* eol
   code' <- "CFTC Code #" *> count 6 alphaNumChar <* hspace
   openInterest' <- "Open Interest is" *> hspace *> num <* hspace <* ":" <* eol
   ps <- line "Positions" *> line (count 11 num) <* line hspace
@@ -114,7 +114,7 @@ parseRpt = do
     Left err -> error err
     Right (prod',swap',managed',other') -> return Rpt{title=title'
       , subtitle=subtitle', date=date', repPos=unwords repPos'
-      , contract=contract', exchange=unwords exchange'
+      , contract=contract', exchange=exchange'
       , underlying=underlying', code=code', openInterest=openInterest'
       , changesFrom=changesFrom', totTraders=totTraders', prod=prod', swap=swap'
       , managed=managed', other=other'}

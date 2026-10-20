@@ -1,0 +1,441 @@
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 13, 2026           
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+USGC HSFO (PLATTS) - ICE FUTURES ENERGY DIV   (1000 barrels)                                                   :
+CFTC Code #02141B                                                    Open Interest is    22,782                :
+: Positions                                                                                                    :
+:   11,602    18,659     1,855       383       198         0         0       117     5,947       350     2,975 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:      293     1,306       266        69       -39         0         0        -6       829        56       -82 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     50.9      81.9       8.1       1.7       0.9       0.0       0.0       0.5      26.1       1.5      13.1 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    56                     :
+:       29        36         .         .         .         0         0         .         8         .         5 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 13, 2026           
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+FUEL OIL-3% USGC/3.5% FOB RDAM - ICE FUTURES ENERGY DIV   (1000 barrels)                                       :
+CFTC Code #02141C                                                    Open Interest is    14,929                :
+: Positions                                                                                                    :
+:    8,862     7,622     3,635       622       215         0     2,760         0       527     2,040     1,642 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:    1,474       683         0        90        25         0         0         0         0       688      -246 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     59.4      51.1      24.3       4.2       1.4       0.0      18.5       0.0       3.5      13.7      11.0 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    40                     :
+:       20        18         4         .         .         0         .         0         .         4         . :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 13, 2026           
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+USGC HSFO-PLATTS/BRENT 1ST LN  - ICE FUTURES ENERGY DIV   (1000 Barrels)                                       :
+CFTC Code #02141R                                                    Open Interest is    11,176                :
+: Positions                                                                                                    :
+:    9,755     4,244       302     1,215         0         0        50         0        83     4,537     1,006 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:      965       896        20       135         0         0         0         0        83         3       378 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     87.3      38.0       2.7      10.9       0.0       0.0       0.4       0.0       0.7      40.6       9.0 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    37                     :
+:       20        16         .         .         0         0         .         0         .         6         . :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 13, 2026           
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+NY HARBOR ULSD - NEW YORK MERCANTILE EXCHANGE   (CONTRACTS OF 42,000 U.S. GALLONS)                             :
+CFTC Code #022651                                                    Open Interest is   268,475                :
+: Positions                                                                                                    :
+:   60,668   145,943    59,355     7,360     8,688    32,794    20,720    23,927     9,691     7,012    21,815 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:   16,842    21,274     1,709       801      -627     1,145       498     2,482     2,076    -1,035      -152 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     22.6      54.4      22.1       2.7       3.2      12.2       7.7       8.9       3.6       2.6       8.1 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   167                     :
+:       47        61        17         6        13        34        13        27        13        16        23 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 13, 2026           
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+ETHANOL T2 FOB INCL DUTY - NEW YORK MERCANTILE EXCHANGE   (100 CUBIC METERS)                                   :
+CFTC Code #025608                                                    Open Interest is     3,519                :
+: Positions                                                                                                    :
+:    3,020     3,310         0         0         0         0         0         0       149         0        10 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:      -18        17         0         0         0         0         0         0         0         0         0 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     85.8      94.1       0.0       0.0       0.0       0.0       0.0       0.0       4.2       0.0       0.3 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    21                     :
+:       14        16         0         0         0         0         0         0         .         0         . :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 13, 2026           
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+ETHANOL - NEW YORK MERCANTILE EXCHANGE   (CONTRACTS OF 42,000 U.S. GALLONS)                                    :
+CFTC Code #025651                                                    Open Interest is    42,014                :
+: Positions                                                                                                    :
+:   27,956    34,795       926     3,202       549     8,556        34       190     1,496     1,338     1,611 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:    2,974     2,855        26       457        97       542       -45       -30      -202       198       429 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     66.5      82.8       2.2       7.6       1.3      20.4       0.1       0.5       3.6       3.2       3.8 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   122                     :
+:       49        66         4         4         5        21         .         .        10         4         6 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 13, 2026           
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+CRUDE DIFF-WCS HOUSTON/WTI 1ST - ICE FUTURES ENERGY DIV   (1000 Barrels)                                       :
+CFTC Code #06739C                                                    Open Interest is    64,374                :
+: Positions                                                                                                    :
+:   46,114    63,335     4,675         0        40    12,436       516       389       636         0        84 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:    2,490     2,795       295         0         0       -60        55        15       125         0       -20 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     71.6      98.4       7.3       0.0       0.1      19.3       0.8       0.6       1.0       0.0       0.1 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    45                     :
+:       28        22         .         0         .         4         .         .         .         0         . :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 13, 2026           
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+CRUDE OIL, LIGHT SWEET-WTI - ICE FUTURES EUROPE   (CONTRACTS OF 1,000 BARRELS)                                 :
+CFTC Code #067411                                                    Open Interest is   754,570                :
+: Positions                                                                                                    :
+:  440,310   337,767     8,062    86,914    64,168    15,990    21,056    28,117    46,629    64,466   137,186 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:   16,439      -614    -1,725     1,400     3,208    -2,881    -2,349     4,548    -4,840     5,085   -10,090 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     58.4      44.8       1.1      11.5       8.5       2.1       2.8       3.7       6.2       8.5      18.2 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   116                     :
+:       41        35         4        11        14         4        10        11        10        24        30 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 13, 2026           
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+WTI CRUDE OIL 1ST LINE - ICE FUTURES ENERGY DIV   1000 US barrels per lot                                      :
+CFTC Code #06741Q                                                    Open Interest is    21,708                :
+: Positions                                                                                                    :
+:   14,607     2,969       914     7,742     1,708         0         0         0     1,180     6,019       973 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:    1,738        80         0       728        10         0         0         0        40       870       -64 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     67.3      13.7       4.2      35.7       7.9       0.0       0.0       0.0       5.4      27.7       4.5 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    20                     :
+:        8         4         .         6         4         0         0         0         .         .         . :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 13, 2026           
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+CRUDE DIFF-TMX WCS 1A INDEX - ICE FUTURES ENERGY DIV   1000 BARRELS                                            :
+CFTC Code #06742G                                                    Open Interest is    77,730                :
+: Positions                                                                                                    :
+:   75,800    44,597       940    13,123        75         0    19,415       420       450        55         0 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:    5,385     4,535         0       -50         0         0       995      -150       120        55         0 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     97.5      57.4       1.2      16.9       0.1       0.0      25.0       0.5       0.6       0.1       0.0 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    49                     :
+:       26        21         .         8         .         0         4         .         .         .         0 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 13, 2026           
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+CRUDE DIFF-TMX SW 1A INDEX - ICE FUTURES ENERGY DIV   1000 BARRELS                                             :
+CFTC Code #06742T                                                    Open Interest is    10,482                :
+: Positions                                                                                                    :
+:   10,227     3,826         0     6,106         0       185         0        70         0       480         0 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:     -334      -364         0        15         0        15         0       -15         0        30         0 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     97.6      36.5       0.0      58.3       0.0       1.8       0.0       0.7       0.0       4.6       0.0 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    29                     :
+:       12        16         0         6         0         .         0         .         0         .         0 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 13, 2026           
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+CONDENSATE DIF-TMX C5 1A INDEX - ICE FUTURES ENERGY DIV   1000 BARRELS                                         :
+CFTC Code #06743A                                                    Open Interest is    14,470                :
+: Positions                                                                                                    :
+:   13,745    14,260       695        60         0         0         0         0         0         0         0 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:      750       690         0         0         0         0         0         0         0         0         0 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     95.0      98.5       4.8       0.4       0.0       0.0       0.0       0.0       0.0       0.0       0.0 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    25                     :
+:       15        16         .         .         0         0         0         0         0         0         0 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 13, 2026           
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE   (CONTRACTS OF 1,000 BARRELS)                                     :
+CFTC Code #067651                                                    Open Interest is 1,900,179                :
+: Positions                                                                                                    :
+:  660,971   307,828   126,747   605,225   140,911   171,973   131,399   286,687   172,680   112,911   260,071 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:   42,215    24,082     9,340    26,350   -17,256    -6,380     6,644   -24,884    14,327        20    -9,555 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     34.8      16.2       6.7      31.9       7.4       9.1       6.9      15.1       9.1       5.9      13.7 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   307                     :
+:       60        56        12        30        32        58        30        55        66        41        63 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 13, 2026           
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+WTI FINANCIAL CRUDE OIL - NEW YORK MERCANTILE EXCHANGE   (CONTRACTS OF 1,000 BARRELS)                          :
+CFTC Code #06765A                                                    Open Interest is   206,605                :
+: Positions                                                                                                    :
+:   30,004    58,712    54,179    50,102    18,013         0         0         0    66,458    23,348     8,901 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:    4,882     7,565     2,263     2,144    -1,315         0         0         0      -500     1,539       567 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     14.5      28.4      26.2      24.3       8.7       0.0       0.0       0.0      32.2      11.3       4.3 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    49                     :
+:       13        16        11         6        13         0         0         0         5         6         8 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 13, 2026           
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+BRENT LAST DAY - NEW YORK MERCANTILE EXCHANGE   (CONTRACTS OF 1,000 BARRELS)                                   :
+CFTC Code #06765T                                                    Open Interest is   228,851                :
+: Positions                                                                                                    :
+:   16,377    52,483    70,838        44     8,650     3,946     1,243     2,703    33,055    74,830    80,964 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:    1,192    -4,491       981         0     3,144      -654         0    -1,119    -2,267     4,142    -5,003 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:      7.2      22.9      31.0       0.0       3.8       1.7       0.5       1.2      14.4      32.7      35.4 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    56                     :
+:       11        15         9         .         7         .         .         4        13        13        21 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 13, 2026           
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+WTI  HOUSTON ARGUS/WTI TR MO - NEW YORK MERCANTILE EXCHANGE   (CONTRACTS OF 1,000 BARRELS)                     :
+CFTC Code #0676A5                                                    Open Interest is   527,523                :
+: Positions                                                                                                    :
+:  495,568   373,544         0    51,560     6,268       885    30,859     8,400     3,214    34,584     9,139 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:   33,141    30,436         0     3,010    -2,240      -100       100         0       142      -719     1,110 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     93.9      70.8       0.0       9.8       1.2       0.2       5.8       1.6       0.6       6.6       1.7 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    47                     :
+:       24        27         0         7         .         .         .         .         .         .         . :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 13, 2026           
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+WTI MIDLAND ARGUS VS WTI TRADE - NEW YORK MERCANTILE EXCHANGE   (CONTRACTS OF 1,000 BARRELS)                   :
+CFTC Code #067A71                                                    Open Interest is   462,920                :
+: Positions                                                                                                    :
+:  429,114   289,630     2,030   147,689     4,794         0     5,260         0    17,716         0     1,005 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:   30,410    23,140    -1,590     8,040       843         0         0         0      -268         0       540 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     92.7      62.6       0.4      31.9       1.0       0.0       1.1       0.0       3.8       0.0       0.2 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    37                     :
+:       18        13         .        10         .         0         .         0         .         0         . :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 13, 2026           
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+GASOLINE RBOB - NEW YORK MERCANTILE EXCHANGE   (CONTRACTS OF 42,000 U.S. GALLONS)                              :
+CFTC Code #111659                                                    Open Interest is   340,268                :
+: Positions                                                                                                    :
+:   80,921   174,777    44,924    41,057    13,308   107,045     9,137    34,885    12,374    34,821    19,392 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:   -1,182    -2,607    -7,220       144     3,323    -2,105    -2,927    -4,731     2,353    -1,755      -209 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     23.8      51.4      13.2      12.1       3.9      31.5       2.7      10.3       3.6      10.2       5.7 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   237                     :
+:       59        81        16         8        18        70        11        46        24        16        27 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 13, 2026           
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+GULF COAST CBOB GAS A2 PL RBOB - NEW YORK MERCANTILE EXCHANGE   (CONTRACTS OF 42,000 GALLONS)                  :
+CFTC Code #111A34                                                    Open Interest is    19,998                :
+: Positions                                                                                                    :
+:   17,317    13,302         0     3,991         0     1,520         0       665         0         0         0 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:      350       325         0       165         0       555         0       225         0         0         0 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     86.6      66.5       0.0      20.0       0.0       7.6       0.0       3.3       0.0       0.0       0.0 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    27                     :
+:       20        19         0         .         0         .         0         .         0         0         0 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 13, 2026           
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+GULF JET NY HEAT OIL SPR - NEW YORK MERCANTILE EXCHANGE   (CONTRACTS OF 42,000 GALLONS)                        :
+CFTC Code #86465A                                                    Open Interest is    11,691                :
+: Positions                                                                                                    :
+:    9,254    11,626     2,046         0        45         0         0         0         0         0         0 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:      750       795        45         0       -33         0         0         0         0         0         0 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     79.2      99.4      17.5       0.0       0.4       0.0       0.0       0.0       0.0       0.0       0.0 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    30                     :
+:       17        19         5         0         .         0         0         0         0         0         0 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders-All Futures Combined Positions as of October 13, 2026           
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+GULF # 6 FUEL OIL CRACK - NEW YORK MERCANTILE EXCHANGE   (CONTRACTS OF 1,000 BARRELS)                          :
+CFTC Code #86565A                                                    Open Interest is     9,595                :
+: Positions                                                                                                    :
+:    3,605     7,119     2,210         0       320       360       150       570     1,729       625       801 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:      305       285       -75         0        75         0       -90         0       -25         0        50 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     37.6      74.2      23.0       0.0       3.3       3.8       1.6       5.9      18.0       6.5       8.3 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    30                     :
+:       13        13         4         0         .         .         .         .         .         .         4 :
+----------------------------------------------------------------------------------------------------------------
