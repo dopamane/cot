@@ -45,14 +45,17 @@ fileArg = strArgument $ metavar "FILE" <> completer (bashCompleter "file")
   <> help "Optional input file otherwise stream STDIN"
 
 rptParser :: Parser Rpt
-rptParser = fmap rpt $ (,,)
+rptParser = fmap rpt $ (,,,,,)
   <$> strOption (long "title" <> value "Disaggregated Commitments of Traders" <> showDefault <> help "report title")
   <*> strOption (long "subtitle" <> value "All Futures Combined Positions" <> showDefault <> help "report subtitle")
   <*> strOption (long "date" <> help "report date")
+  <*> strOption (long "contract" <> help "report contract")
+  <*> strOption (long "exchange" <> help "report exchange")
+  <*> strOption (long "under" <> help "underlying asset")
 
-rpt :: (String,String,String) -> Rpt
-rpt (t,st,d) = Rpt{title=t,subtitle=st,date=d,repPos="Reportable Positions"
-  , contract="",exchange="",uparens=False,underlying="",code="",openInterest=0
+rpt :: (String,String,String,String,String,String) -> Rpt
+rpt (t,st,d,c,e,u) = Rpt{title=t,subtitle=st,date=d,repPos="Reportable Positions"
+  , contract=c,exchange=e,uparens=False,underlying=u,code="",openInterest=0
   ,changesFrom="",totTraders=0,prod=prod',swap=swap',managed=managed',
   other=other'}
   where
