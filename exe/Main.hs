@@ -16,27 +16,28 @@ main = do
       i <- maybe getContents readFile fM
       putStrLn $ either errorBundlePretty (render s) $ parseCOT i
     PrettyCOT t st d c e up u co oi (p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10) cf
-      (c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10) (o0,o1,o2,o3,o4,o5,o6,o7,o8,o9,o10) fM ->
+      (c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10) (o0,o1,o2,o3,o4,o5,o6,o7,o8,o9,o10)
+      tt (t0,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10) fM ->
         maybe putStrLn writeFile fM $ show $ pretty $
         Rpt{title=t,subtitle=st,date=d,repPos="Reportable Positions"
         , contract=c,exchange=e,uparens=up,underlying=u,code=co,openInterest=oi
-        ,changesFrom=cf,totTraders=0
+        ,changesFrom=cf,totTraders=tt
         ,prod=Cat{posLong=p0, posShort=p1, posSpread=Nothing
           , changeLong=c0, changeShort=c1, changeSpread=Nothing
           , pctOpenLong=o0, pctOpenShort=o1, pctOpenSpread=Nothing
-          , tradersLong=Nothing, tradersShort=Nothing, tradersSpread=Nothing}
+          , tradersLong=t0, tradersShort=t1, tradersSpread=Nothing}
         ,swap=Cat{posLong=p2, posShort=p3, posSpread=Just p4
           , changeLong=c2, changeShort=c3, changeSpread=Just c4
           , pctOpenLong=o2, pctOpenShort=o3, pctOpenSpread=Just o4
-          , tradersLong=Nothing, tradersShort=Nothing, tradersSpread=Nothing}
+          , tradersLong=t2, tradersShort=t3, tradersSpread=t4}
         ,managed=Cat{posLong=p5, posShort=p6, posSpread=Just p7
           , changeLong=c5, changeShort=c6, changeSpread=Just c7
           , pctOpenLong=o5, pctOpenShort=o6, pctOpenSpread=Just o7
-          , tradersLong=Nothing, tradersShort=Nothing, tradersSpread=Nothing}
+          , tradersLong=t5, tradersShort=t6, tradersSpread=t7}
         ,other=Cat{posLong=p8, posShort=p9, posSpread=Just p10
           , changeLong=c8, changeShort=c9, changeSpread=Just c10
           , pctOpenLong=o8, pctOpenShort=o9, pctOpenSpread=Just o10
-          , tradersLong=Nothing, tradersShort=Nothing, tradersSpread=Nothing}
+          , tradersLong=t8, tradersShort=t9, tradersSpread=t10}
         }
 
 render :: Bool -> COT -> String
@@ -52,7 +53,8 @@ pinfo v = info (parser <**> simpleVersioner v <**> helper) $
 
 data CLI = ParseCOT Bool (Maybe String)
   | PrettyCOT String String String String String Bool String String
-    Integer (Row Integer) String (Row Integer) (Row Double) (Maybe String)
+    Integer (Row Integer) String (Row Integer) (Row Double) Integer
+    (Row (Maybe Integer)) (Maybe String)
 
 type Row a = (a,a,a,a,a,a,a,a,a,a,a)
 
@@ -84,11 +86,17 @@ prettyParser = PrettyCOT
   <*> option (eitherReader row) (long "positions" <> value zrow <> help "report positions, default zeros")
   <*> strOption (long "changes-from" <> help "date of last change")
   <*> option (eitherReader row) (long "changes" <> value zrow <> help "report changes, default zeros")
-  <*> option (eitherReader row) (long "percents" <> value zrow <> help "percent of open interest")
+  <*> option (eitherReader row) (long "percents" <> value zrow <> help "percents of open interest")
+  <*> option auto (long "total-traders" <> value 0 <> showDefault <> help "report total traders")
+  <*> option (eitherReader trow) (long "traders" <> value nrow <> help "report traders, default dots")
   <*> optional fileArg
 
 zrow :: Num a => Row a
 zrow = (0,0,0,0,0,0,0,0,0,0,0)
+
+nrow :: Row (Maybe a)
+nrow = (Nothing,Nothing,Nothing,Nothing,Nothing,Nothing,Nothing,Nothing,Nothing
+  ,Nothing,Nothing)
 
 row :: Read a => String -> Either String (Row a)
 row s = case words s of
@@ -97,3 +105,14 @@ row s = case words s of
     readEither w5 <*> readEither w6 <*> readEither w7 <*> readEither w8 <*>
     readEither w9 <*> readEither w10
   _ -> Left "expecting 11 row elements"
+
+trow :: String -> Either String (Row (Maybe Integer))
+trow s = case words s of
+  [w0,w1,w2,w3,w4,w5,w6,w7,w8,w9,w10] -> (,,,,,,,,,,) <$> readTrader w0
+    <*> readTrader w1 <*> readTrader w2 <*> readTrader w3 <*> readTrader w4 <*>
+    readTrader w5 <*> readTrader w6 <*> readTrader w7 <*> readTrader w8 <*>
+    readTrader w9 <*> readTrader w10
+  _ -> Left "expecting 11 row elements"
+  where
+    readTrader "." = Right Nothing
+    readTrader w = Just <$> readEither w
