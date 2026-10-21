@@ -99,20 +99,17 @@ nrow = (Nothing,Nothing,Nothing,Nothing,Nothing,Nothing,Nothing,Nothing,Nothing
   ,Nothing,Nothing)
 
 row :: Read a => String -> Either String (Row a)
-row s = case words s of
-  [w0,w1,w2,w3,w4,w5,w6,w7,w8,w9,w10] -> (,,,,,,,,,,) <$> readEither w0
-    <*> readEither w1 <*> readEither w2 <*> readEither w3 <*> readEither w4 <*>
-    readEither w5 <*> readEither w6 <*> readEither w7 <*> readEither w8 <*>
-    readEither w9 <*> readEither w10
+row = rrow readEither
+
+rrow :: Read a => (String -> Either String a) -> String -> Either String (Row a)
+rrow r s = case words s of
+  [w0,w1,w2,w3,w4,w5,w6,w7,w8,w9,w10] -> (,,,,,,,,,,) <$> r w0 <*> r w1
+    <*> r w2 <*> r w3 <*> r w4 <*> r w5 <*> r w6 <*> r w7 <*> r w8 <*>
+    r w9 <*> r w10
   _ -> Left "expecting 11 row elements"
 
 trow :: String -> Either String (Row (Maybe Integer))
-trow s = case words s of
-  [w0,w1,w2,w3,w4,w5,w6,w7,w8,w9,w10] -> (,,,,,,,,,,) <$> readTrader w0
-    <*> readTrader w1 <*> readTrader w2 <*> readTrader w3 <*> readTrader w4 <*>
-    readTrader w5 <*> readTrader w6 <*> readTrader w7 <*> readTrader w8 <*>
-    readTrader w9 <*> readTrader w10
-  _ -> Left "expecting 11 row elements"
+trow = rrow readTrader
   where
     readTrader "." = Right Nothing
     readTrader w = Just <$> readEither w
