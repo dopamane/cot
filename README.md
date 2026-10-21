@@ -15,13 +15,14 @@ cot pretty --date "October 20, 2026" --contract WHEAT-SRW \
   --changes-from "October 6, 2026" \
   --changes 2265 521 -866 -328 8162 2155 5880 -2346 -1666 -3833 2347 \
   --percents 14.8 25.6 17.2 3.4 5.7 17.6 24.0 23.7 7.0 4.1 7.0 \
-  --tot-traders 401 \
-  --traders 67 94 25 10 16 77 53 71 63 47 60
+  --total-traders 401 --traders 67 94 25 10 16 77 53 71 63 47 60
 ```
 
 Development
 
 ```
 cabal build
+cabal haddock
+cabal test
 cabal run cot -- --help
 ```

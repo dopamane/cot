@@ -5,7 +5,7 @@ import Data.Version
 import Options.Applicative
 import Paths_cot
 import Prettyprinter
-import Text.Megaparsec
+import Text.Megaparsec hiding (option)
 
 main :: IO ()
 main = do
@@ -14,7 +14,8 @@ main = do
     ParseCOT s fM -> do
       i <- maybe getContents readFile fM
       putStrLn $ either errorBundlePretty (render s) $ parseCOT i
-    PrettyCOT t st d c e u fM -> maybe putStrLn writeFile fM $ show $ pretty $ rpt t st d c e u
+    PrettyCOT t st d c e up u co oi fM -> maybe putStrLn writeFile fM $ show $
+      pretty $ rpt t st d c e up u co oi
 
 render :: Bool -> COT -> String
 render s c | s = show c
@@ -28,7 +29,8 @@ pinfo v = info (parser <**> simpleVersioner v <**> helper) $
   progDesc "Commitments of Traders"
 
 data CLI = ParseCOT Bool (Maybe String)
-  | PrettyCOT String String String String String String (Maybe String)
+  | PrettyCOT String String String String String Bool String String
+    Integer (Maybe String)
 
 parser :: Parser CLI
 parser = hsubparser $ mconcat
@@ -51,12 +53,16 @@ prettyParser = PrettyCOT
   <*> strOption (long "date" <> help "report date")
   <*> strOption (long "contract" <> help "report contract")
   <*> strOption (long "exchange" <> help "report exchange")
+  <*> switch (long "parens" <> help "parenthesize underlying asset")
   <*> strOption (long "under" <> help "underlying asset")
+  <*> strOption (long "code" <> help "CFTC 6-digit code")
+  <*> option auto (long "open-interest" <> value 0 <> showDefault <> help "report open interest")
   <*> optional fileArg
 
-rpt :: String -> String -> String -> String -> String -> String -> Rpt
-rpt t st d c e u = Rpt{title=t,subtitle=st,date=d,repPos="Reportable Positions"
-  , contract=c,exchange=e,uparens=False,underlying=u,code="",openInterest=0
+rpt :: String -> String -> String -> String -> String -> Bool -> String
+  -> String -> Integer -> Rpt
+rpt t st d c e up u co oi = Rpt{title=t,subtitle=st,date=d,repPos="Reportable Positions"
+  , contract=c,exchange=e,uparens=up,underlying=u,code=co,openInterest=oi
   ,changesFrom="",totTraders=0,prod=prod',swap=swap',managed=managed',
   other=other'}
   where
