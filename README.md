@@ -18,6 +18,12 @@ cot pretty --futes --date "October 20, 2026" --contract WHEAT-SRW \
   --total-traders 401 --traders "67 94 25 10 16 77 53 71 63 47 60"
 ```
 
+Install
+
+```
+cabal install cot
+```
+
 Development
 
 ```
