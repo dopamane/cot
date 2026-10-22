@@ -7,7 +7,7 @@ Usage
 ```
 cot --help
 cot parse short.txt
-cot pretty --date "October 20, 2026" --contract WHEAT-SRW \
+cot pretty --futes --date "October 20, 2026" --contract WHEAT-SRW \
   --exchange "CHICAGO BOARD OF TRADE" \
   --parens --under "CONTRACTS OF 5,000 BUSHELS" \
   --code 001602 --open-interest 506744 \

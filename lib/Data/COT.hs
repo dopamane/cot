@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module Data.COT (COT, Rpt(..), Cat(..), parseCOT) where
+module Data.COT (COT, RptType(..), Rpt(..), Cat(..), parseCOT) where
 
 import Control.Monad
 import Data.Functor
@@ -14,10 +14,17 @@ import qualified Text.Megaparsec.Char.Lexer as L
 
 type COT = [Rpt]
 
-data Rpt = Rpt{title :: String, subtitle :: String, date :: String, repPos :: String
-  , contract :: String, exchange :: String, uparens :: Bool, underlying :: String
-  , code :: String, openInterest :: Integer, changesFrom :: String
-  , totTraders :: Integer, prod :: Cat, swap :: Cat, managed :: Cat, other :: Cat}
+data RptType = Futes | OptsAndFutes
+  deriving (Eq, Read, Show)
+
+instance Pretty RptType where
+  pretty Futes = "All Futures Combined Positions"
+  pretty OptsAndFutes = "Options and Futures Combined Positions"
+
+data Rpt = Rpt{rptType :: RptType, date :: String, contract :: String
+  , exchange :: String, uparens :: Bool, underlying :: String, code :: String
+  , openInterest :: Integer, changesFrom :: String, totTraders :: Integer
+  , prod :: Cat, swap :: Cat, managed :: Cat, other :: Cat}
   deriving (Eq, Read, Show)
 
 pwidth :: Num a => a
@@ -28,10 +35,13 @@ cwidth = 8
 
 instance Pretty Rpt where
   pretty r@Rpt{prod=p,swap=s,managed=m,other=o} = vsep
-    [ let info = title r ++ "-" ++ subtitle r ++ " as of " ++ date r
+    [ let pad = case rptType r of
+            Futes -> ""
+            OptsAndFutes -> " "
+          info = "Disaggregated Commitments of Traders-" ++ pad ++
+            show (pretty $ rptType r) ++ " as of " ++ date r
       in pretty $ info ++ replicate (101 - length info) ' '
-    , ":                                             " <> pretty (repPos r)
-      <> "                                             :"
+    , ":                                             Reportable Positions                                             :"
     , ":------------------------------------------------------------------------------------------------------------- :"
     , ": Producer/Merchant :                             :                             :                              :"
     , ":  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :"
@@ -93,10 +103,11 @@ type Parser = Parsec Void String
 
 parseRpt :: Parser Rpt
 parseRpt = do
-  title' <- unwords <$> someTill word "-"
-  subtitle' <- unwords <$> someTill word "as of "
-  date' <- parseDate <* hspace <* eol
-  repPos' <- line $ some word
+  _ <- "Disaggregated Commitments of Traders-" <* hspace
+  rptType' <- ("All Futures Combined Positions" $> Futes) <|>
+    ("Options and Futures Combined Positions" $> OptsAndFutes)
+  date' <- " as of " *> parseDate <* hspace <* eol
+  _ <- line "Reportable Positions"
   _ <- line $ some "-"
   _ <- count 3 $ someTill printChar eol
   _ <- some "-" <* eol
@@ -115,11 +126,10 @@ parseRpt = do
     *> "Total Traders:" *> hspace *> num
   ts <- line (row $ fmap Just num <|> ("." *> hspace $> Nothing)) <* some "-" <* eol
   let (prod',swap',managed',other')=cats ps cs oi ts
-  return Rpt{title=title', subtitle=subtitle', date=date', repPos=unwords repPos'
-    , contract=contract', uparens=uparens', exchange=exchange'
-    , underlying=underlying', code=code', openInterest=openInterest'
-    , changesFrom=changesFrom', totTraders=totTraders', prod=prod', swap=swap'
-    , managed=managed', other=other'}
+  return Rpt{rptType=rptType', date=date', contract=contract'
+    , uparens=uparens', exchange=exchange', underlying=underlying', code=code'
+    , openInterest=openInterest', changesFrom=changesFrom'
+    , totTraders=totTraders', prod=prod', swap=swap', managed=managed', other=other'}
   where
     cats (p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10) (c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10)
       (o0,o1,o2,o3,o4,o5,o6,o7,o8,o9,o10) (t0,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10)
@@ -152,9 +162,6 @@ parseDate = do
   d <- some digitChar <* ", "
   y <- some digitChar
   return $ unwords [m, d ++ ",", y]
-
-word :: Parser String
-word = some alphaNumChar <* hspace
 
 num :: Parser Integer
 num = L.signed hspace $ fmap read go <* hspace

@@ -15,13 +15,12 @@ main = do
     ParseCOT s fM -> do
       i <- maybe getContents readFile fM
       putStrLn $ either errorBundlePretty (render s) $ parseCOT i
-    PrettyCOT t st d c e up u co oi (p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10) cf
+    PrettyCOT ty d c e up u co oi (p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10) cf
       (c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10) (o0,o1,o2,o3,o4,o5,o6,o7,o8,o9,o10)
       tt (t0,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10) fM ->
         maybe putStrLn writeFile fM $ show $ pretty $
-        Rpt{title=t,subtitle=st,date=d,repPos="Reportable Positions"
-        , contract=c,exchange=e,uparens=up,underlying=u,code=co,openInterest=oi
-        ,changesFrom=cf,totTraders=tt
+        Rpt{rptType=ty,date=d,contract=c,exchange=e,uparens=up,underlying=u
+          ,code=co,openInterest=oi,changesFrom=cf,totTraders=tt
         ,prod=Cat{posLong=p0, posShort=p1, posSpread=Nothing
           , changeLong=c0, changeShort=c1, changeSpread=Nothing
           , pctOpenLong=o0, pctOpenShort=o1, pctOpenSpread=Nothing
@@ -52,7 +51,7 @@ pinfo v = info (parser <**> simpleVersioner v <**> helper) $
   progDesc "Commitments of Traders"
 
 data CLI = ParseCOT Bool (Maybe String)
-  | PrettyCOT String String String String String Bool String String
+  | PrettyCOT RptType String String String Bool String String
     Integer (Row Integer) String (Row Integer) (Row Double) Integer
     (Row (Maybe Integer)) (Maybe String)
 
@@ -74,8 +73,8 @@ fileArg = strArgument $ metavar "FILE" <> completer (bashCompleter "file")
 
 prettyParser :: Parser CLI
 prettyParser = PrettyCOT
-  <$> strOption (long "title" <> value "Disaggregated Commitments of Traders" <> showDefault <> help "report title")
-  <*> strOption (long "subtitle" <> value "All Futures Combined Positions" <> showDefault <> help "report subtitle")
+  <$> (flag' Futes (long "futes" <> help "futures only report type") <|>
+        flag' OptsAndFutes (long "opts-futes" <> help "options and futures report type"))
   <*> strOption (long "date" <> help "report date")
   <*> strOption (long "contract" <> help "report contract")
   <*> strOption (long "exchange" <> help "report exchange")

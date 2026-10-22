@@ -1,0 +1,588 @@
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+WHEAT-SRW - CHICAGO BOARD OF TRADE   (CONTRACTS OF 5,000 BUSHELS)                                              :
+CFTC Code #001602                                                    Open Interest is   608,955                :
+: Positions                                                                                                    :
+:   97,351   141,499    87,621    17,021    35,797    85,818   118,856   139,581    24,389    21,658    99,311 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:    5,793     2,183    -1,155    -1,149     8,066     1,740     5,235      -722    -1,449      -736      -290 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     16.0      23.2      14.4       2.8       5.9      14.1      19.5      22.9       4.0       3.6      16.3 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   436                     :
+:       78       106        28         9        21        85        52        81        76        56        83 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+WHEAT-HRW - CHICAGO BOARD OF TRADE   (CONTRACTS OF 5,000 BUSHELS)                                              :
+CFTC Code #001612                                                    Open Interest is   343,473                :
+: Positions                                                                                                    :
+:   31,543   114,516    81,170     2,578    13,377    59,844    42,453    86,722     9,881    21,154    39,971 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:    2,211    -7,214       504      -632     1,815    -9,465    -2,816     5,810    -1,740     1,493     1,232 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:      9.2      33.3      23.6       0.8       3.9      17.4      12.4      25.2       2.9       6.2      11.6 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   282                     :
+:       62        86        20         6        16        60        32        54        29        36        40 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+WHEAT-HRSpring - MIAX FUTURES EXCHANGE   (CONTRACTS OF 5,000 BUSHELS)                                          :
+CFTC Code #001626                                                    Open Interest is    73,685                :
+: Positions                                                                                                    :
+:   31,777    51,608     7,761       671       725    16,407     6,870     1,063     1,874     1,215     3,261 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:   -1,575    -3,543       388       137        84    -1,173       959         6      -264       175      -197 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     43.1      70.0      10.5       0.9       1.0      22.3       9.3       1.4       2.5       1.6       4.4 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   118                     :
+:       55        45         7         .         5        11        12         5         8         7         8 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+CORN - CHICAGO BOARD OF TRADE   (CONTRACTS OF 5,000 BUSHELS)                                                   :
+CFTC Code #002602                                                    Open Interest is 2,519,671                :
+: Positions                                                                                                    :
+:  543,397 1,096,637   354,626    28,801   118,134   321,331    90,454   369,847    96,093    67,839   521,436 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:   34,197   -47,533     3,882    -4,240       704   -62,919    23,562     3,961    -1,625     3,619   -14,573 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     21.6      43.5      14.1       1.1       4.7      12.8       3.6      14.7       3.8       2.7      20.7 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   915                     :
+:      398       401        34        10        28       109        37       107       129        99       142 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+CORN CONSECUTIVE CSO - CHICAGO BOARD OF TRADE   (CONTRACTS OF 5,000 BUSHELS)                                   :
+CFTC Code #00260B                                                    Open Interest is    22,152                :
+: Positions                                                                                                    :
+:   13,318     4,021       160         0       237        60     3,452     1,107     2,627     9,397     3,475 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:     -397    -1,398        46         0       -72         2       396      -427      -285       377      -411 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     60.1      18.2       0.7       0.0       1.1       0.3      15.6       5.0      11.9      42.4      15.7 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    21                     :
+:       13        12         .         0         .         .         .         .         .         .         4 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+ROUGH RICE - CHICAGO BOARD OF TRADE   (CONTRACTS OF 200,000 POUNDS)                                            :
+CFTC Code #039601                                                    Open Interest is    16,090                :
+: Positions                                                                                                    :
+:    5,068    10,044       174       137         0     3,947     1,326        13     1,715     1,112     2,150 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:     -194       593       -17         0         0       130      -311         3       172        -9       166 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     31.5      62.4       1.1       0.9       0.0      24.5       8.2       0.1      10.7       6.9      13.4 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    83                     :
+:       19        17         .         .         0        17         8         .        20         6         9 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+LEAN HOGS - CHICAGO MERCANTILE EXCHANGE   (CONTRACTS OF 40,000 POUNDS)                                         :
+CFTC Code #054642                                                    Open Interest is   427,572                :
+: Positions                                                                                                    :
+:   64,736    91,817    83,270     1,367    10,669    69,172   111,260    59,837    14,282    31,074    95,174 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:    2,347      -458     3,531    -1,449      -503    -3,977     2,839       441       668     2,400    -3,263 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     15.1      21.5      19.5       0.3       2.5      16.2      26.0      14.0       3.3       7.3      22.3 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   375                     :
+:       83        82        22         4        15        58        77        67        49        54        68 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+LIVE CATTLE - CHICAGO MERCANTILE EXCHANGE   (CONTRACTS OF 40,000 POUNDS)                                       :
+CFTC Code #057642                                                    Open Interest is   390,003                :
+: Positions                                                                                                    :
+:   66,003   172,559    73,303     2,164     4,638    73,074    24,326    57,246    10,110    12,295    76,469 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:      302     2,323     4,230      -365        63    -4,889    -2,717     1,234       554       548     1,766 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     16.9      44.2      18.8       0.6       1.2      18.7       6.2      14.7       2.6       3.2      19.6 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   414                     :
+:      126       159        19         5        14        75        43        73        48        41        67 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+FEEDER CATTLE - CHICAGO MERCANTILE EXCHANGE   (CONTRACTS OF 50,000 POUNDS)                                     :
+CFTC Code #061641                                                    Open Interest is    92,539                :
+: Positions                                                                                                    :
+:    9,847    16,440     6,996       484     1,844    18,855    10,003    12,903     2,519     7,181    28,795 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:       85      -147       -51        -7      -297        28       -37      -144      -261      -585       291 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     10.6      17.8       7.6       0.5       2.0      20.4      10.8      13.9       2.7       7.8      31.1 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   261                     :
+:       72        83        13         4        10        46        27        35        29        35        49 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+BUTTER (CASH SETTLED) - CHICAGO MERCANTILE EXCHANGE   (CONTRACTS OF 20,000 POUNDS)                             :
+CFTC Code #050642                                                    Open Interest is    32,041                :
+: Positions                                                                                                    :
+:   15,619    14,236     5,986       658     3,049         0       891       493        84     6,696     5,569 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:      951       963       -13      -306       206         0        48        59        19       485       174 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     48.7      44.4      18.7       2.1       9.5       0.0       2.8       1.5       0.3      20.9      17.4 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    65                     :
+:       40        25         .         .         5         0         5         .         .         8         6 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+MILK, Class III - CHICAGO MERCANTILE EXCHANGE   (CONTRACTS OF 200,000 POUNDS)                                  :
+CFTC Code #052641                                                    Open Interest is    75,506                :
+: Positions                                                                                                    :
+:   25,690    13,894     8,487     4,074     4,934         0     7,452     3,720    10,451    15,177    17,511 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:      900     1,370        22       245      -692      -522       332       309       508      -968      -964 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     34.0      18.4      11.2       5.4       6.5       0.0       9.9       4.9      13.8      20.1      23.2 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   100                     :
+:       38        28         6         .         5         0        22         4        14        15        23 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+NON FAT DRY MILK - CHICAGO MERCANTILE EXCHANGE   (CONTRACTS OF 44,000 LBS.)                                    :
+CFTC Code #052642                                                    Open Interest is    24,521                :
+: Positions                                                                                                    :
+:   12,616     9,095     2,253       733     1,174       111       520     1,986       176     5,776     4,837 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:      863       225        57       182       -10       -12        37       160       -56       437       142 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     51.5      37.1       9.2       3.0       4.8       0.5       2.1       8.1       0.7      23.6      19.7 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    49                     :
+:       27        21         5         .         4         .         .         .         .         7         7 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+CME MILK IV - CHICAGO MERCANTILE EXCHANGE   (CONTRACTS OF 200,000 POUNDS)                                      :
+CFTC Code #052644                                                    Open Interest is    34,811                :
+: Positions                                                                                                    :
+:    5,697    16,676     3,126     1,963       807     1,823         0       211    16,029     5,814     6,402 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:      129       547       139       325        46        77         0       -16       688       114       207 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     16.4      47.9       9.0       5.6       2.3       5.2       0.0       0.6      46.0      16.7      18.4 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    64                     :
+:       33        37         .         .         4         .         0         .         6        10        13 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+DRY WHEY - CHICAGO MERCANTILE EXCHANGE   (CONTRACTS OF 44,000 LBS.)                                            :
+CFTC Code #052645                                                    Open Interest is     4,898                :
+: Positions                                                                                                    :
+:    2,612     1,163     1,294       804         0         0       127        12         0     1,958       463 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:      -37        62       164        62        -6         0       -11         0         0        68        -3 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     53.3      23.7      26.4      16.4       0.0       0.0       2.6       0.2       0.0      40.0       9.5 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    21                     :
+:        9         8         .         .         0         0         .         .         0         6         5 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+CHEESE (CASH-SETTLED) - CHICAGO MERCANTILE EXCHANGE   (CONTRACTS OF 20,000 POUNDS)                             :
+CFTC Code #063642                                                    Open Interest is    46,299                :
+: Positions                                                                                                    :
+:   25,929    19,360     7,149     2,741     4,619       326     3,896     2,134       585     8,656     4,321 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:      156       596      -385       291       606        45      -370       552       202      -264       336 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     56.0      41.8      15.4       5.9      10.0       0.7       8.4       4.6       1.3      18.7       9.3 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    81                     :
+:       36        33         .         .         5         .        18         .         .        11         9 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+SOYBEANS - CHICAGO BOARD OF TRADE   (CONTRACTS OF 5,000 BUSHELS)                                               :
+CFTC Code #005602                                                    Open Interest is 1,329,482                :
+: Positions                                                                                                    :
+:  374,339   648,523   129,346    78,434    38,597   272,905    35,414   168,820    53,806    39,648   234,267 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:  -16,557   -36,974    -4,224    -3,719    -2,372    -6,239     7,930   -20,191    -4,507      -723     6,359 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     28.2      48.8       9.7       5.9       2.9      20.5       2.7      12.7       4.0       3.0      17.6 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   656                     :
+:      197       273        22        19        27       113        36        90        69        85       116 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+MINI SOYBEANS - CHICAGO BOARD OF TRADE   (Contracts of 1,000 Bushels)                                          :
+CFTC Code #005603                                                    Open Interest is    25,440                :
+: Positions                                                                                                    :
+:       49     6,302         0         0         0         0       188        12    21,727       988     1,020 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:       20    -2,596         0         0         0         0        48        -8       -95        60       138 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:      0.2      24.8       0.0       0.0       0.0       0.0       0.7       0.0      85.4       3.9       4.0 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    20                     :
+:        .         8         0         0         0         0         .         .         6         5         5 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+SOYBEAN CSO - CHICAGO BOARD OF TRADE   (CONTRACTS OF 5,000 BUSHELS)                                            :
+CFTC Code #005606                                                    Open Interest is    10,652                :
+: Positions                                                                                                    :
+:    4,883     1,090         0       127        58       112     1,893       705     1,174     3,578     3,004 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:      -28      -152         0        98         4       -15      -140      -172      -243      -141       207 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     45.8      10.2       0.0       1.2       0.5       1.1      17.8       6.6      11.0      33.6      28.2 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    23                     :
+:       13        12         0         .         .         .         .         .         .         4         6 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+SOYBEAN OIL - CHICAGO BOARD OF TRADE   (CONTRACTS OF 60,000 POUNDS)                                            :
+CFTC Code #007601                                                    Open Interest is   638,230                :
+: Positions                                                                                                    :
+:  140,355   351,675    92,517     4,974    39,618   116,449    27,121    91,055    32,513    13,677    87,401 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:    7,543     1,271    -2,659    -2,763     7,471    -5,892     4,227     6,640     3,220       541    -4,458 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     22.0      55.1      14.5       0.8       6.2      18.2       4.2      14.3       5.1       2.1      13.7 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   333                     :
+:       78        91        23         7        18        79        32        64        47        25        53 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+SOYBEAN MEAL - CHICAGO BOARD OF TRADE   (CONTRACTS OF 100 TONS)                                                :
+CFTC Code #026603                                                    Open Interest is   742,046                :
+: Positions                                                                                                    :
+:   94,331   452,688   131,522    22,294    13,439   212,946     6,815    96,063    39,501    22,002    99,104 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:    5,600       -25     3,112     5,878     3,500      -704       -32    -6,161    -1,228     1,462     9,570 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     12.7      61.0      17.7       3.0       1.8      28.7       0.9      12.9       5.3       3.0      13.4 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   364                     :
+:      101       113        18        12        18        91        16        55        52        31        58 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+USD Malaysian Crude Palm Oil C - CHICAGO MERCANTILE EXCHANGE   (CONTRACTS OF 25 METRIC TONS)                   :
+CFTC Code #037021                                                    Open Interest is    42,343                :
+: Positions                                                                                                    :
+:   35,969    35,213     1,548       180     2,791       200     2,789       370       805       360       640 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:      530      -842      -802         0         0      -160      -160       310      -130       360       200 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     84.9      83.2       3.7       0.4       6.6       0.5       6.6       0.9       1.9       0.9       1.5 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    25                     :
+:       10         9         .         .         4         .         .         .         4         .         . :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+CANOLA - ICE FUTURES U.S.   (20 Metric Tonnes)                                                                 :
+CFTC Code #135731                                                    Open Interest is   382,506                :
+: Positions                                                                                                    :
+:  161,819   223,834     2,990    19,725     5,459   127,029    25,033    32,655     9,681    32,394    39,000 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:    3,343   -12,195    -2,418       177      -864    -3,478     5,753    -3,998    -2,412     1,233      -242 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     42.3      58.5       0.8       5.2       1.4      33.2       6.5       8.5       2.5       8.5      10.2 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   498                     :
+:       55       142         5        10         8        72        28        32        55       171        65 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+COTTON NO. 2 - ICE FUTURES U.S.   (CONTRACTS OF 50,000 POUNDS)                                                 :
+CFTC Code #033661                                                    Open Interest is   542,451                :
+: Positions                                                                                                    :
+:  120,982   256,602    68,915    29,620    38,471    76,983    11,284    65,231    36,406    13,612   117,538 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:    3,531     1,140      -335       405        22       261    -1,600     4,154    -3,103       335     9,564 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     22.3      47.3      12.7       5.5       7.1      14.2       2.1      12.0       6.7       2.5      21.7 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   365                     :
+:       55        56        20        18        25        90        30        67       101        38        79 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+FRZN CONCENTRATED ORANGE JUICE - ICE FUTURES U.S.   (CONTRACTS OF 15,000 POUNDS)                               :
+CFTC Code #040701                                                    Open Interest is    11,289                :
+: Positions                                                                                                    :
+:    2,447     3,161       930       156       153     2,118     3,291        46     1,709       596     1,702 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:       18      -110       -30        -4      -107       -75      -143        14        11        60        47 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     21.7      28.0       8.2       1.4       1.4      18.8      29.2       0.4      15.1       5.3      15.1 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    58                     :
+:       10         8         .         .         .         7        14         .        14         8         8 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+COCOA - ICE FUTURES U.S.   (CONTRACTS OF 10 METRIC TONS)                                                       :
+CFTC Code #073732                                                    Open Interest is   239,962                :
+: Positions                                                                                                    :
+:   58,404    77,546    46,684     8,431    21,358    15,695    30,072    35,823     3,471    10,009    47,635 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:     -253     2,598       630      -155       429      -471      -588    -4,357       923      -393       255 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     24.3      32.3      19.5       3.5       8.9       6.5      12.5      14.9       1.4       4.2      19.9 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   213                     :
+:       33        28        21         6        17        42        45        58        29        31        42 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+SUGAR NO. 11 - ICE FUTURES U.S.   (CONTRACTS OF 112,000 POUNDS)                                                :
+CFTC Code #080732                                                    Open Interest is 1,509,322                :
+: Positions                                                                                                    :
+:  208,553   623,396   264,087   202,527    66,500   355,100    93,259   198,210    87,368    56,847   220,260 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:   -1,141    12,830     5,394     3,373     4,207     3,734      -743    11,751     5,734    -1,633    11,030 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     13.8      41.3      17.5      13.4       4.4      23.5       6.2      13.1       5.8       3.8      14.6 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   313                     :
+:       51        59        22        13        22        97        24        69        61        28        44 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+COFFEE C - ICE FUTURES U.S.   (CONTRACTS OF 37,500 POUNDS)                                                     :
+CFTC Code #083731                                                    Open Interest is   201,085                :
+: Positions                                                                                                    :
+:   49,048    66,036    26,234    21,223     7,499    31,777    21,510    32,227     8,495     7,453    38,144 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:   -2,045    -2,745       512    -2,045       403    -2,119     1,544    -1,147       925        24    -3,396 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     24.4      32.8      13.0      10.6       3.7      15.8      10.7      16.0       4.2       3.7      19.0 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:   352                     :
+:       85        88        17        24        25        55        53        68        38        53        61 :
+----------------------------------------------------------------------------------------------------------------
+Disaggregated Commitments of Traders- Options and Futures Combined Positions as of October 13, 2026  
+:                                             Reportable Positions                                             :
+:------------------------------------------------------------------------------------------------------------- :
+: Producer/Merchant :                             :                             :                              :
+:  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :
+:   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :
+----------------------------------------------------------------------------------------------------------------
+COFFEE CALENDAR SPREAD OPTIONS - ICE FUTURES U.S.   (CONTRACTS OF 37,500 POUNDS)                               :
+CFTC Code #083736                                                    Open Interest is    14,195                :
+: Positions                                                                                                    :
+:    5,855     3,414        16         0         0     2,187     1,681     3,094         0     2,976     3,009 :
+:                                                                                                              :
+: Changes from:     October 6, 2026                                                                            :
+:      116    -1,162        16         0         0       -74       709      -939         0       515      -190 :
+:                                                                                                              :
+: Percent of Open Interest Represented by Each Category of Trader                                              :
+:     41.2      24.1       0.1       0.0       0.0      15.4      11.8      21.8       0.0      21.0      21.2 :
+:                                                                                                              :
+: Number of Traders in Each Category                                  Total Traders:    24                     :
+:       10         9         .         0         0         5         .         4         0         5         5 :
+----------------------------------------------------------------------------------------------------------------
