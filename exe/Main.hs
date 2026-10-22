@@ -26,15 +26,15 @@ main = do
           , pctOpenLong=o0, pctOpenShort=o1, pctOpenSpread=Nothing
           , tradersLong=t0, tradersShort=t1, tradersSpread=Nothing}
         ,swap=Cat{posLong=p2, posShort=p3, posSpread=Just p4
-          , changeLong=c2, changeShort=c3, changeSpread=Just c4
+          , changeLong=c2, changeShort=c3, changeSpread=c4
           , pctOpenLong=o2, pctOpenShort=o3, pctOpenSpread=Just o4
           , tradersLong=t2, tradersShort=t3, tradersSpread=t4}
         ,managed=Cat{posLong=p5, posShort=p6, posSpread=Just p7
-          , changeLong=c5, changeShort=c6, changeSpread=Just c7
+          , changeLong=c5, changeShort=c6, changeSpread=c7
           , pctOpenLong=o5, pctOpenShort=o6, pctOpenSpread=Just o7
           , tradersLong=t5, tradersShort=t6, tradersSpread=t7}
         ,other=Cat{posLong=p8, posShort=p9, posSpread=Just p10
-          , changeLong=c8, changeShort=c9, changeSpread=Just c10
+          , changeLong=c8, changeShort=c9, changeSpread=c10
           , pctOpenLong=o8, pctOpenShort=o9, pctOpenSpread=Just o10
           , tradersLong=t8, tradersShort=t9, tradersSpread=t10}
         }
@@ -52,7 +52,7 @@ pinfo v = info (parser <**> simpleVersioner v <**> helper) $
 
 data CLI = ParseCOT Bool (Maybe String)
   | PrettyCOT RptType String String String String String
-    Integer (Row Integer) String (Row Integer) (Row Double) Integer
+    Integer (Row Integer) String (Row (Maybe Integer)) (Row Double) Integer
     (Row (Maybe Integer)) (Maybe String)
 
 type Row a = (a,a,a,a,a,a,a,a,a,a,a)
@@ -83,7 +83,7 @@ prettyParser = PrettyCOT
   <*> option auto (long "open-interest" <> value 0 <> showDefault <> help "report open interest")
   <*> option (eitherReader row) (long "positions" <> value zrow <> help "report positions, default zeros")
   <*> strOption (long "changes-from" <> help "date of last change")
-  <*> option (eitherReader row) (long "changes" <> value zrow <> help "report changes, default zeros")
+  <*> option (eitherReader trow) (long "changes" <> value nrow <> help "report changes, default dots")
   <*> option (eitherReader row) (long "percents" <> value zrow <> help "percents of open interest")
   <*> option auto (long "total-traders" <> value 0 <> showDefault <> help "report total traders")
   <*> option (eitherReader trow) (long "traders" <> value nrow <> help "report traders, default dots")
