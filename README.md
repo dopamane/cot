@@ -9,7 +9,7 @@ cot --help
 cot parse short.txt
 cot pretty --futes --date "October 20, 2026" --contract WHEAT-SRW \
   --exchange "CHICAGO BOARD OF TRADE" \
-  --parens --under "CONTRACTS OF 5,000 BUSHELS" \
+  --under "(CONTRACTS OF 5,000 BUSHELS)" \
   --code 001602 --open-interest 506744 \
   --positions "74823 129848 87075 17174 29002 89109 121664 120140 35547 20598 35223" \
   --changes-from "October 6, 2026" \

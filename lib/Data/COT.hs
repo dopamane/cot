@@ -4,7 +4,6 @@ module Data.COT (COT, RptType(..), Rpt(..), Cat(..), parseCOT) where
 
 import Control.Monad
 import Data.Functor
-import Data.Maybe
 import Data.Void
 import Numeric
 import Prettyprinter hiding (line)
@@ -22,7 +21,7 @@ instance Pretty RptType where
   pretty OptsAndFutes = "Options and Futures Combined Positions"
 
 data Rpt = Rpt{rptType :: RptType, date :: String, contract :: String
-  , exchange :: String, uparens :: Bool, underlying :: String, code :: String
+  , exchange :: String, underlying :: String, code :: String
   , openInterest :: Integer, changesFrom :: String, totTraders :: Integer
   , prod :: Cat, swap :: Cat, managed :: Cat, other :: Cat}
   deriving (Eq, Read, Show)
@@ -47,9 +46,7 @@ instance Pretty Rpt where
     , ":  Processor/User   :        Swap Dealers         :        Managed Money        :      Other Reportables       :"
     , ":   Long  :  Short  :   Long  :  Short  :Spreading:   Long  :  Short  :Spreading:   Long  :  Short  :Spreading :"
     , pretty $ replicate pwidth '-'
-    , let under | uparens r = "(" ++ underlying r ++ ")"
-                | otherwise = underlying r
-          info = contract r ++ " - " ++ exchange r ++ "   " ++ under
+    , let info = contract r ++ " - " ++ exchange r ++ "   " ++ underlying r
           pad = pwidth - length info - 1
       in pretty info <> pretty (replicate pad ' ') <> ":"
     , let oi = snum $ openInterest r
@@ -111,8 +108,7 @@ parseRpt = do
   _ <- some "-" <* eol
   contract' <- someTill printChar " - "
   exchange' <- someTill printChar "   "
-  uparens' <- isJust <$> optional "("
-  underlying' <- someTill printChar (")" <|> "   ") <* hspace <* ":" <* eol
+  underlying' <- someTill printChar "   " <* hspace <* ":" <* eol
   code' <- "CFTC Code #" *> count 6 alphaNumChar <* hspace
   openInterest' <- "Open Interest is" *> hspace *> num <* hspace <* ":" <* eol
   (p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10) <- line "Positions" *> line (row num) <* line hspace
@@ -124,7 +120,7 @@ parseRpt = do
     *> "Total Traders:" *> hspace *> num
   (t0,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10) <- line (row $ fmap Just num <|> ("." *> hspace $> Nothing)) <* some "-" <* eol
   return Rpt{rptType=rptType', date=date', contract=contract'
-    , uparens=uparens', exchange=exchange', underlying=underlying', code=code'
+    , exchange=exchange', underlying=underlying', code=code'
     , openInterest=openInterest', changesFrom=changesFrom', totTraders=totTraders'
     , prod=Cat{posLong=p0, posShort=p1, posSpread=Nothing, changeLong=c0
       , changeShort=c1, changeSpread=Nothing, pctOpenLong=o0, pctOpenShort=o1
