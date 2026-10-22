@@ -113,12 +113,12 @@ parseRpt = do
   openInterest' <- "Open Interest is" *> hspace *> num <* hspace <* ":" <* eol
   (p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10) <- line "Positions" *> line (row num) <* line hspace
   changesFrom' <- line $ "Changes from:" *> hspace *> parseDate
-  (c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10) <- line (row $ fmap Just num <|> ("." *> hspace $> Nothing)) <* line hspace
+  (c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10) <- line (row $ val num) <* line hspace
   _ <- line "Percent of Open Interest Represented by Each Category of Trader"
   (o0,o1,o2,o3,o4,o5,o6,o7,o8,o9,o10) <- line (row dub) <* line hspace
   totTraders' <- line $ "Number of Traders in Each Category" *> hspace
     *> "Total Traders:" *> hspace *> num
-  (t0,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10) <- line (row $ fmap Just num <|> ("." *> hspace $> Nothing)) <* some "-" <* eol
+  (t0,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10) <- line (row $ val num) <* some "-" <* eol
   return Rpt{rptType=rptType', date=date', contract=contract'
     , exchange=exchange', underlying=underlying', code=code'
     , openInterest=openInterest', changesFrom=changesFrom', totTraders=totTraders'
@@ -146,6 +146,9 @@ parseDate = do
   d <- some digitChar <* ", "
   y <- some digitChar
   return $ unwords [m, d ++ ",", y]
+
+val :: Parser a -> Parser (Maybe a)
+val p = fmap Just p <|> ("." *> hspace $> Nothing)
 
 num :: Parser Integer
 num = L.signed hspace $ fmap read go <* hspace
