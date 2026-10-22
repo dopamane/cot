@@ -115,40 +115,30 @@ parseRpt = do
   underlying' <- someTill printChar (")" <|> "   ") <* hspace <* ":" <* eol
   code' <- "CFTC Code #" *> count 6 alphaNumChar <* hspace
   openInterest' <- "Open Interest is" *> hspace *> num <* hspace <* ":" <* eol
-  ps <- line "Positions" *> line (row num) <* line hspace
+  (p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10) <- line "Positions" *> line (row num) <* line hspace
   changesFrom' <- line $ "Changes from:" *> hspace *> parseDate
-  cs <- line (row num) <* line hspace
+  (c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10) <- line (row num) <* line hspace
   _ <- line "Percent of Open Interest Represented by Each Category of Trader"
-  oi <- line (row dub) <* line hspace
+  (o0,o1,o2,o3,o4,o5,o6,o7,o8,o9,o10) <- line (row dub) <* line hspace
   totTraders' <- line $ "Number of Traders in Each Category" *> hspace
     *> "Total Traders:" *> hspace *> num
-  ts <- line (row $ fmap Just num <|> ("." *> hspace $> Nothing)) <* some "-" <* eol
-  let (prod',swap',managed',other')=cats ps cs oi ts
+  (t0,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10) <- line (row $ fmap Just num <|> ("." *> hspace $> Nothing)) <* some "-" <* eol
   return Rpt{rptType=rptType', date=date', contract=contract'
     , uparens=uparens', exchange=exchange', underlying=underlying', code=code'
-    , openInterest=openInterest', changesFrom=changesFrom'
-    , totTraders=totTraders', prod=prod', swap=swap', managed=managed', other=other'}
-  where
-    cats (p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10) (c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10)
-      (o0,o1,o2,o3,o4,o5,o6,o7,o8,o9,o10) (t0,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10)
-      = (prod', swap', managed', other')
-      where
-        prod'=Cat{posLong=p0, posShort=p1, posSpread=Nothing, changeLong=c0
-          , changeShort=c1, changeSpread=Nothing, pctOpenLong=o0, pctOpenShort=o1
-          , pctOpenSpread=Nothing, tradersLong=t0, tradersShort=t1
-          , tradersSpread=Nothing}
-        swap'=Cat{posLong=p2, posShort=p3, posSpread=Just p4, changeLong=c2
-          , changeShort=c3, changeSpread=Just c4, pctOpenLong=o2, pctOpenShort=o3
-          , pctOpenSpread=Just o4, tradersLong=t2, tradersShort=t3
-          , tradersSpread=t4}
-        managed'=Cat{posLong=p5, posShort=p6, posSpread=Just p7, changeLong=c5
-          , changeShort=c6, changeSpread=Just c7, pctOpenLong=o5, pctOpenShort=o6
-          , pctOpenSpread=Just o7, tradersLong=t5, tradersShort=t6
-          , tradersSpread=t7}
-        other'=Cat{posLong=p8, posShort=p9, posSpread=Just p10, changeLong=c8
-          , changeShort=c9, changeSpread=Just c10, pctOpenLong=o8, pctOpenShort=o9
-          , pctOpenSpread=Just o10, tradersLong=t8, tradersShort=t9
-          , tradersSpread=t10}
+    , openInterest=openInterest', changesFrom=changesFrom', totTraders=totTraders'
+    , prod=Cat{posLong=p0, posShort=p1, posSpread=Nothing, changeLong=c0
+      , changeShort=c1, changeSpread=Nothing, pctOpenLong=o0, pctOpenShort=o1
+      , pctOpenSpread=Nothing, tradersLong=t0, tradersShort=t1, tradersSpread=Nothing}
+    , swap=Cat{posLong=p2, posShort=p3, posSpread=Just p4, changeLong=c2
+      , changeShort=c3, changeSpread=Just c4, pctOpenLong=o2, pctOpenShort=o3
+      , pctOpenSpread=Just o4, tradersLong=t2, tradersShort=t3, tradersSpread=t4}
+    , managed=Cat{posLong=p5, posShort=p6, posSpread=Just p7, changeLong=c5
+      , changeShort=c6, changeSpread=Just c7, pctOpenLong=o5, pctOpenShort=o6
+      , pctOpenSpread=Just o7, tradersLong=t5, tradersShort=t6, tradersSpread=t7}
+    , other=Cat{posLong=p8, posShort=p9, posSpread=Just p10, changeLong=c8
+      , changeShort=c9, changeSpread=Just c10, pctOpenLong=o8, pctOpenShort=o9
+      , pctOpenSpread=Just o10, tradersLong=t8, tradersShort=t9, tradersSpread=t10}
+    }
 
 row :: Parser a -> Parser (a,a,a,a,a,a,a,a,a,a,a)
 row p = (,,,,,,,,,,) <$> p <*> p <*> p <*> p <*> p <*> p <*> p <*> p <*> p
