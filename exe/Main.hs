@@ -25,17 +25,17 @@ main = do
           , changeLong=c0, changeShort=c1, changeSpread=Nothing
           , pctOpenLong=o0, pctOpenShort=o1, pctOpenSpread=Nothing
           , tradersLong=t0, tradersShort=t1, tradersSpread=Nothing}
-        ,swap=Cat{posLong=p2, posShort=p3, posSpread=Just p4
+        ,swap=Cat{posLong=p2, posShort=p3, posSpread=p4
           , changeLong=c2, changeShort=c3, changeSpread=c4
-          , pctOpenLong=o2, pctOpenShort=o3, pctOpenSpread=Just o4
+          , pctOpenLong=o2, pctOpenShort=o3, pctOpenSpread=o4
           , tradersLong=t2, tradersShort=t3, tradersSpread=t4}
-        ,managed=Cat{posLong=p5, posShort=p6, posSpread=Just p7
+        ,managed=Cat{posLong=p5, posShort=p6, posSpread=p7
           , changeLong=c5, changeShort=c6, changeSpread=c7
-          , pctOpenLong=o5, pctOpenShort=o6, pctOpenSpread=Just o7
+          , pctOpenLong=o5, pctOpenShort=o6, pctOpenSpread=o7
           , tradersLong=t5, tradersShort=t6, tradersSpread=t7}
-        ,other=Cat{posLong=p8, posShort=p9, posSpread=Just p10
+        ,other=Cat{posLong=p8, posShort=p9, posSpread=p10
           , changeLong=c8, changeShort=c9, changeSpread=c10
-          , pctOpenLong=o8, pctOpenShort=o9, pctOpenSpread=Just o10
+          , pctOpenLong=o8, pctOpenShort=o9, pctOpenSpread=o10
           , tradersLong=t8, tradersShort=t9, tradersSpread=t10}
         }
 
@@ -52,7 +52,7 @@ pinfo v = info (parser <**> simpleVersioner v <**> helper) $
 
 data CLI = ParseCOT Bool (Maybe String)
   | PrettyCOT RptType String String String String String
-    Integer (Row Integer) String (Row (Maybe Integer)) (Row Double) Integer
+    Integer (Row (Maybe Integer)) String (Row (Maybe Integer)) (Row (Maybe Double)) Integer
     (Row (Maybe Integer)) (Maybe String)
 
 type Row a = (a,a,a,a,a,a,a,a,a,a,a)
@@ -81,23 +81,23 @@ prettyParser = PrettyCOT
   <*> strOption (long "under" <> help "underlying asset")
   <*> strOption (long "code" <> value "000000" <> showDefault <> help "CFTC code")
   <*> option auto (long "open-interest" <> value 0 <> showDefault <> help "report open interest")
-  <*> option (eitherReader row) (long "positions" <> value zrow <> help "report positions, default zeros")
+  <*> option (eitherReader row) (long "positions" <> value nrow <> help "report positions, default dots")
   <*> strOption (long "changes-from" <> help "date of last change")
-  <*> option (eitherReader trow) (long "changes" <> value nrow <> help "report changes, default dots")
-  <*> option (eitherReader row) (long "percents" <> value zrow <> help "percents of open interest")
+  <*> option (eitherReader row) (long "changes" <> value nrow <> help "report changes, default dots")
+  <*> option (eitherReader row) (long "percents" <> value nrow <> help "percents of open interest, default dots")
   <*> option auto (long "total-traders" <> value 0 <> showDefault <> help "report total traders")
-  <*> option (eitherReader trow) (long "traders" <> value nrow <> help "report traders, default dots")
+  <*> option (eitherReader row) (long "traders" <> value nrow <> help "report traders, default dots")
   <*> optional fileArg
-
-zrow :: Num a => Row a
-zrow = (0,0,0,0,0,0,0,0,0,0,0)
 
 nrow :: Row (Maybe a)
 nrow = (Nothing,Nothing,Nothing,Nothing,Nothing,Nothing,Nothing,Nothing,Nothing
   ,Nothing,Nothing)
 
-row :: Read a => String -> Either String (Row a)
-row = rrow readEither
+row :: Read a => String -> Either String (Row (Maybe a))
+row = rrow readVal
+  where
+    readVal "." = Right Nothing
+    readVal v = Just <$> readEither v
 
 rrow :: Read a => (String -> Either String a) -> String -> Either String (Row a)
 rrow r s = case words s of
@@ -105,9 +105,3 @@ rrow r s = case words s of
     <*> r w2 <*> r w3 <*> r w4 <*> r w5 <*> r w6 <*> r w7 <*> r w8 <*>
     r w9 <*> r w10
   _ -> Left "expecting 11 row elements"
-
-trow :: String -> Either String (Row (Maybe Integer))
-trow = rrow readTrader
-  where
-    readTrader "." = Right Nothing
-    readTrader w = Just <$> readEither w
