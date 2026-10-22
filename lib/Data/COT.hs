@@ -31,7 +31,7 @@ pwidth :: Num a => a
 pwidth = 112
 
 cwidth :: Num a => a
-cwidth = 8
+cwidth = 9
 
 instance Pretty Rpt where
   pretty r@Rpt{prod=p,swap=s,managed=m,other=o} = vsep
@@ -57,38 +57,36 @@ instance Pretty Rpt where
           pad = pwidth - length info - 1
       in pretty $ info ++ replicate pad ' ' ++ ":"
     , ": Positions                                                                                                    :"
-    , let ps = [snum $ posLong p, snum $ posShort p
-            , snum $ posLong s, snum $ posShort s, maybe "." snum $ posSpread s
-            , snum $ posLong m, snum $ posShort m, maybe "." snum $ posSpread m
-            , snum $ posLong o, snum $ posShort o, maybe "." snum $ posSpread o]
-      in ":" <+> hsep [pretty $ replicate (cwidth - length p') ' ' ++ p' ++ " " | p' <- ps] <> ":"
+    , prow [snum $ posLong p, snum $ posShort p
+      , snum $ posLong s, snum $ posShort s, maybe "." snum $ posSpread s
+      , snum $ posLong m, snum $ posShort m, maybe "." snum $ posSpread m
+      , snum $ posLong o, snum $ posShort o, maybe "." snum $ posSpread o]
     , ":                                                                                                              :"
     , let info = "Changes from:" ++ replicate 5 ' ' ++ changesFrom r
       in ":" <+> pretty info <> pretty (replicate (pwidth - length info - 3) ' ') <> ":"
-    , let cs = [snum $ changeLong p, snum $ changeShort p
-            , snum $ changeLong s, snum $ changeShort s, maybe "." snum $ changeSpread s
-            , snum $ changeLong m, snum $ changeShort m, maybe "." snum $ changeSpread m
-            , snum $ changeLong o, snum $ changeShort o, maybe "." snum $ changeSpread o]
-      in ":" <+> hsep [pretty $ replicate (cwidth - length c') ' ' ++ c' ++ " " | c' <- cs] <> ":"
+    , prow [snum $ changeLong p, snum $ changeShort p
+      , snum $ changeLong s, snum $ changeShort s, maybe "." snum $ changeSpread s
+      , snum $ changeLong m, snum $ changeShort m, maybe "." snum $ changeSpread m
+      , snum $ changeLong o, snum $ changeShort o, maybe "." snum $ changeSpread o]
     , ":                                                                                                              :"
     , ": Percent of Open Interest Represented by Each Category of Trader                                              :"
-    , let os = [ sdub $ pctOpenLong p, sdub $ pctOpenShort p
-               , sdub $ pctOpenLong s, sdub $ pctOpenShort s, maybe "." sdub $ pctOpenSpread s
-               , sdub $ pctOpenLong m, sdub $ pctOpenShort m, maybe "." sdub $ pctOpenSpread m
-               , sdub $ pctOpenLong o, sdub $ pctOpenShort o, maybe "." sdub $ pctOpenSpread o]
-      in ":" <+> hsep [pretty $ replicate (cwidth - length o') ' ' ++ o' ++ " " | o' <- os] <> ":"
+    , prow [ sdub $ pctOpenLong p, sdub $ pctOpenShort p
+      , sdub $ pctOpenLong s, sdub $ pctOpenShort s, maybe "." sdub $ pctOpenSpread s
+      , sdub $ pctOpenLong m, sdub $ pctOpenShort m, maybe "." sdub $ pctOpenSpread m
+      , sdub $ pctOpenLong o, sdub $ pctOpenShort o, maybe "." sdub $ pctOpenSpread o]
     , ":                                                                                                              :"
     , let tot = snum $ totTraders r
       in ": Number of Traders in Each Category                                  Total Traders:"
-           <+> pretty (replicate (cwidth - length tot - 3) ' ' ++ tot ++ replicate (cwidth * 2 + 4) ' ') <+> ":"
-    , let ts = [maybe "." snum $ tradersLong p, maybe "." snum $ tradersShort p
-            , maybe "." snum $ tradersLong s, maybe "." snum $ tradersShort s, maybe "." snum $ tradersSpread s
-            , maybe "." snum $ tradersLong m, maybe "." snum $ tradersShort m, maybe "." snum $ tradersSpread m
-            , maybe "." snum $ tradersLong o, maybe "." snum $ tradersShort o, maybe "." snum $ tradersSpread o
-            ]
-      in ":" <+> hsep [pretty $ replicate (cwidth - length t') ' ' ++ t' ++ " " | t' <- ts] <> ":"
+           <> pretty (replicate (6 - length tot) ' ' ++ tot ++ replicate (cwidth * 2 + 2) ' ') <+> ":"
+    , prow [maybe "." snum $ tradersLong p, maybe "." snum $ tradersShort p
+      , maybe "." snum $ tradersLong s, maybe "." snum $ tradersShort s, maybe "." snum $ tradersSpread s
+      , maybe "." snum $ tradersLong m, maybe "." snum $ tradersShort m, maybe "." snum $ tradersSpread m
+      , maybe "." snum $ tradersLong o, maybe "." snum $ tradersShort o, maybe "." snum $ tradersSpread o]
     , pretty $ replicate pwidth '-'
     ]
+
+prow :: [String] -> Doc ann
+prow es = ":" <> hsep [pretty $ replicate (cwidth - length e) ' ' ++ e | e <- es] <+> ":"
 
 data Cat = Cat{posLong :: Integer, posShort :: Integer, posSpread :: Maybe Integer
   , changeLong :: Integer, changeShort :: Integer, changeSpread :: Maybe Integer

@@ -15,6 +15,7 @@ main = getDataDir >>= \dataDir ->
   , trip "wti" $ dataDir </> "wti.txt"
   , trip "fuel-oil" $ dataDir </> "fuel-oil.txt"
   , trip "petroleum" $ dataDir </> "petroleum.txt"
+  , trip "agriculture" $ dataDir </> "agriculture.txt"
   ]
 
 trip :: String -> FilePath -> TestTree
