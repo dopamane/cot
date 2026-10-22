@@ -57,6 +57,7 @@ test-suite test
     bytestring,
     cot,
     filepath,
+    megaparsec,
     prettyprinter,
     tasty,
     tasty-golden

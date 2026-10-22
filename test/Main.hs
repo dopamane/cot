@@ -7,6 +7,7 @@ import Prettyprinter
 import System.FilePath
 import Test.Tasty
 import Test.Tasty.Golden
+import Text.Megaparsec
 
 main :: IO ()
 main = getDataDir >>= \dataDir ->
@@ -22,5 +23,5 @@ trip :: String -> FilePath -> TestTree
 trip testName dataFile = goldenVsString testName dataFile $ do
   result <- parseCOT <$> readFile dataFile
   case result of
-    Left _ -> error "parse fail"
+    Left err -> error $ errorBundlePretty err
     Right cot -> return $ BS.pack $ show (vsep $ map pretty cot) ++ "\n"
